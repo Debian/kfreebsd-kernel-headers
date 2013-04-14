@@ -1,7 +1,8 @@
-kfreebsd-kernel-headers (0.83) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (0.85) UNRELEASED; urgency=low
 
   * Strip __FBSDID() from all headers using it (including sctp.h).
     (Closes: #684330)
+  * <sys/sysctl.h> "u_int" -> "unsigned int". Closes: #705407
 
  -- Robert Millan <rmh@debian.org>  Fri, 17 Aug 2012 13:08:05 +0200
 
