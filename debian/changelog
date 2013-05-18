@@ -6,6 +6,14 @@ kfreebsd-kernel-headers (0.85) UNRELEASED; urgency=low
 
  -- Robert Millan <rmh@debian.org>  Fri, 17 Aug 2012 13:08:05 +0200
 
+kfreebsd-kernel-headers (0.83) unstable; urgency=low
+
+  * Include <sys/termios.h> instead of <sys/_termios.h> from <sys/tty.h>
+    so that code including both does not fail to build due to redefinition
+    of struct termios. (Closes: #700027)
+
+ -- Guillem Jover <guillem@debian.org>  Thu, 07 Mar 2013 04:41:12 +0100
+
 kfreebsd-kernel-headers (0.82) unstable; urgency=low
 
   * Convert __GNUCLIKE* feature tests into __GNUC__.  (Closes: #677417)

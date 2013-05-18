@@ -77,6 +77,7 @@ build-arch-stamp:
 		-e 's/#\s*include\s\+<sys\/time\.h>\s*/#include <sys\/kern\/time.h>/g' \
 		-e 's/#\s*include\s\+<sys\/param\.h>\s*/#include <sys\/kern\/param.h>/g' \
 		-e 's/#\s*include\s\+<sys\/queue\.h>\s*/#include <sys\/kern\/queue.h>/g' \
+		-e 's/#\s*include\s\+<sys\/_termios\.h>\s*/#include <sys\/termios.h>/g' \
 		\
 		-e 's/__size_t/__this_is_a_temporary_kludge__size_t/g' $(shell ## see rev 184135 in GCC SVN ##) \
 	; done) ; \
