@@ -7,6 +7,9 @@ kfreebsd-kernel-headers (0.84) UNRELEASED; urgency=low
   [ Petr Salinger ]
   * <sys/sysctl.h> "u_int" -> "unsigned int". Closes: #705407
 
+  [ Guillem Jover ]
+  * Switch to canonical Vcs URLs.
+
  -- Robert Millan <rmh@debian.org>  Fri, 17 Aug 2012 13:08:05 +0200
 
 kfreebsd-kernel-headers (0.83) unstable; urgency=low
