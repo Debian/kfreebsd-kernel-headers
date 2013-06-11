@@ -1,0 +1,30 @@
+
+we do not define __siginfohandler_t anywhere,
+but these structures are used by unwind library
+in mean time, hack it ;-)
+
+
+--- a/sys/amd64/include/sigframe.h
++++ b/sys/amd64/include/sigframe.h
+@@ -36,7 +36,8 @@
+  */
+ struct sigframe {
+ 	union {
+-		__siginfohandler_t	*sf_action;
++		__sighandler_t		*sf_action;
++/* should be:	__siginfohandler_t	*sf_action; */
+ 		__sighandler_t		*sf_handler;
+ 	} sf_ahu;
+ 	ucontext_t	sf_uc;		/* = *sf_ucontext */
+--- a/sys/i386/include/sigframe.h
++++ b/sys/i386/include/sigframe.h
+@@ -105,7 +105,8 @@
+ 	register_t	sf_addr;	/* undocumented 4th arg */
+ 
+ 	union {
+-		__siginfohandler_t	*sf_action;
++		__sighandler_t		*sf_action;
++/* should be	__siginfohandler_t	*sf_action; */
+ 		__sighandler_t		*sf_handler;
+ 	} sf_ahu;
+ 	ucontext_t	sf_uc;		/* = *sf_ucontext */

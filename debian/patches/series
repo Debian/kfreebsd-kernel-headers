@@ -35,3 +35,4 @@ endian_collision.diff
 type_collision.diff
 param_collision.diff
 bsd_visible.diff
+050_sigframe.diff
