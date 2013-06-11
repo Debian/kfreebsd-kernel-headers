@@ -247,6 +247,15 @@
  #include <sys/kern/queue.h>
  #include <sys/event.h>
  #include <sys/lock.h>
+@@ -45,7 +46,7 @@
+  * This structure is used for the management of descriptors.  It may be
+  * shared by multiple processes.
+  */
+-#define NDSLOTTYPE	u_long
++#define NDSLOTTYPE	unsigned long
+ 
+ struct filedesc {
+ 	struct	file **fd_ofiles;	/* file structures for open files */
 --- a/sys/sys/jail.h
 +++ b/sys/sys/jail.h
 @@ -39,6 +39,10 @@

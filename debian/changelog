@@ -11,6 +11,10 @@ kfreebsd-kernel-headers (0.84) UNRELEASED; urgency=low
   [ Guillem Jover ]
   * Switch to canonical Vcs URLs.
 
+  [ Steven Chamberlain ]
+  * <sys/filedesc.h> "u_long" -> "unsigned long" for compatibility
+    with C89 (Closes: #686402)
+
  -- Robert Millan <rmh@debian.org>  Tue, 11 Jun 2013 18:08:05 +0200
 
 kfreebsd-kernel-headers (0.83) unstable; urgency=low
