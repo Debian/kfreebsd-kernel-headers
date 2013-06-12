@@ -11,6 +11,7 @@ kfreebsd-kernel-headers (0.84) UNRELEASED; urgency=low
   [ Guillem Jover ]
   * Switch to canonical Vcs URLs.
   * Cleanup Uploaders.
+  * Now using Standards-Version 3.9.4 (no changes needed).
 
   [ Steven Chamberlain ]
   * <sys/filedesc.h> "u_long" -> "unsigned long" for compatibility

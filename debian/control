@@ -8,7 +8,7 @@ Uploaders: Aurelien Jarno <aurel32@debian.org>,
 Build-Depends: debhelper (>= 7), quilt, kfreebsd-source-9.0
 Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/kfreebsd-kernel-headers/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/kfreebsd-kernel-headers/
-Standards-Version: 3.9.2
+Standards-Version: 3.9.4
 
 Package: kfreebsd-kernel-headers
 Architecture: kfreebsd-any
