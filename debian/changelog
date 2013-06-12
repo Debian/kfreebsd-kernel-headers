@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (0.84) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (0.84) unstable; urgency=low
 
   [ Robert Millan ]
   * Strip __FBSDID() from all headers using it (including sctp.h).
@@ -6,7 +6,7 @@ kfreebsd-kernel-headers (0.84) UNRELEASED; urgency=low
 
   [ Petr Salinger ]
   * <sys/sysctl.h> "u_int" -> "unsigned int". Closes: #705407
-  * Make <machine/sigframe.h> compileable
+  * Make <machine/sigframe.h> compilable.
 
   [ Guillem Jover ]
   * Switch to canonical Vcs URLs.
@@ -15,9 +15,9 @@ kfreebsd-kernel-headers (0.84) UNRELEASED; urgency=low
 
   [ Steven Chamberlain ]
   * <sys/filedesc.h> "u_long" -> "unsigned long" for compatibility
-    with C99
+    with C99.
 
- -- Robert Millan <rmh@debian.org>  Tue, 11 Jun 2013 18:08:05 +0200
+ -- Guillem Jover <guillem@debian.org>  Wed, 12 Jun 2013 03:30:26 +0200
 
 kfreebsd-kernel-headers (0.83) unstable; urgency=low
 
