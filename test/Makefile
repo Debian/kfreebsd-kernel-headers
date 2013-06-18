@@ -1,4 +1,5 @@
 TESTS = \
+	termios_collision.o \
 	type_collision.o \
 	time_collision.o \
 	param_collision.o \

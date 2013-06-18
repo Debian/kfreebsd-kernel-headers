@@ -2,6 +2,8 @@ kfreebsd-kernel-headers (0.85) UNRELEASED; urgency=low
 
   * patches/param_collision.diff: Fix DEV_BSIZE collision (in
     <sys/param.h>).
+  * test/termios_collision.c: New testcase, checks for termios
+    collisions (see previous fix in rev 4460 / bug #700027).
 
  -- Robert Millan <rmh@debian.org>  Tue, 18 Jun 2013 21:06:59 +0200
 
