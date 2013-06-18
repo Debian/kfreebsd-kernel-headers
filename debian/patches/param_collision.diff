@@ -28,7 +28,20 @@
  #define	NOFILE		OPEN_MAX	/* max open files per process */
  #define	NOGROUP		65535		/* marker for empty group set member */
  #define MAXHOSTNAMELEN	256		/* max hostname size */
-@@ -197,9 +198,11 @@
+@@ -117,10 +118,12 @@
+ #include <sys/limits.h>
+ #endif
+ 
++#if 0
+ #ifndef DEV_BSHIFT
+ #define	DEV_BSHIFT	9		/* log2(DEV_BSIZE) */
+ #endif
+ #define	DEV_BSIZE	(1<<DEV_BSHIFT)
++#endif
+ 
+ #ifndef BLKDEV_IOSIZE
+ #define BLKDEV_IOSIZE  PAGE_SIZE	/* default block device I/O size */
+@@ -197,9 +200,11 @@
  #define	PDROP	0x200	/* OR'd with pri to stop re-entry of interlock mutex */
  #define	PBDRY	0x400	/* for PCATCH stop is done on the user boundary */
  
@@ -40,7 +53,7 @@
  #define	NBPW	sizeof(int)	/* number of bytes per word (integer) */
  
  #define	CMASK	022		/* default file mask: S_IWGRP|S_IWOTH */
-@@ -245,6 +248,7 @@
+@@ -245,6 +250,7 @@
  #define	MAXPATHLEN	PATH_MAX
  #define MAXSYMLINKS	32
  
@@ -48,7 +61,7 @@
  /* Bit map related macros. */
  #define	setbit(a,i)	(((unsigned char *)(a))[(i)/NBBY] |= 1<<((i)%NBBY))
  #define	clrbit(a,i)	(((unsigned char *)(a))[(i)/NBBY] &= ~(1<<((i)%NBBY)))
-@@ -252,15 +256,20 @@
+@@ -252,15 +258,20 @@
  	(((const unsigned char *)(a))[(i)/NBBY] & (1<<((i)%NBBY)))
  #define	isclr(a,i)							\
  	((((const unsigned char *)(a))[(i)/NBBY] & (1<<((i)%NBBY))) == 0)

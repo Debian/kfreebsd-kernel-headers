@@ -1,3 +1,10 @@
+kfreebsd-kernel-headers (0.85) UNRELEASED; urgency=low
+
+  * patches/param_collision.diff: Fix DEV_BSIZE collision (in
+    <sys/param.h>).
+
+ -- Robert Millan <rmh@debian.org>  Tue, 18 Jun 2013 21:06:59 +0200
+
 kfreebsd-kernel-headers (0.84) unstable; urgency=low
 
   [ Robert Millan ]
