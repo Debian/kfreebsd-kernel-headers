@@ -100,12 +100,14 @@ install-arch: build-arch
 	dh_installdirs
 	dh_install --sourcedir=$(CURDIR)
 
-ifneq ($(filter amd64, $(kfreebsd_cpu)),)
-	sh debian/generate-asm.sh $(kfreebsd_cpu) $(CURDIR)/sys $(HEADERS_PACKAGE)/usr/include
-else
-	mkdir -p $(HEADERS_PACKAGE)/usr/include/machine
+	mkdir -p $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/machine
 	cd $(CURDIR)/sys/$(kfreebsd_cpu)/include \
-		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/machine \;
+		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/machine \;
+
+ifeq ($(kfreebsd_cpu), amd64)
+	mkdir -p $(HEADERS_PACKAGE)/usr/include/i386-kfreebsd-gnu/machine
+	cd $(CURDIR)/sys/i386/include \
+		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/i386-kfreebsd-gnu/machine \;
 endif
 
 ifneq ($(filter i386 amd64, $(kfreebsd_cpu)),)
