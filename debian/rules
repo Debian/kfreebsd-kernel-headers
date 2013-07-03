@@ -7,17 +7,18 @@
 
 DEB_HOST_ARCH_CPU := $(shell dpkg-architecture -qDEB_HOST_ARCH_CPU)
 
+full_version	:= $(shell dpkg-parsechangelog | grep ^Version: | sed -e 's/^.*: //g')
+version		:= $(shell echo $(full_version) | sed -e 's/[~+-].*//g')
+major           := $(shell echo $(version) | sed -e 's/\..*//g')
+
 ifeq ($(DEB_HOST_ARCH_CPU), mipsel)
 kfreebsd_cpu	:= mips
 else
 kfreebsd_cpu	:= $(DEB_HOST_ARCH_CPU)
 endif
 
-major=9
-minor=0
-
 HEADERS_PACKAGE	:= $(CURDIR)/debian/kfreebsd-kernel-headers
-SRC_TAR		:= /usr/src/kfreebsd-source-$(major).$(minor).tar.xz
+SRC_TAR		:= /usr/src/kfreebsd-source-$(version).tar.xz
 
 clean:
 	dh_testdir

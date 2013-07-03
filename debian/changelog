@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (0.85) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (9.0-1) UNRELEASED; urgency=low
 
   * patches/param_collision.diff: Fix DEV_BSIZE collision (in
     <sys/param.h>).
