@@ -1,3 +1,9 @@
+kfreebsd-kernel-headers (9.1-1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Robert Millan <rmh@debian.org>  Wed, 03 Jul 2013 20:20:16 +0200
+
 kfreebsd-kernel-headers (9.0-1) unstable; urgency=low
 
   * patches/param_collision.diff: Fix DEV_BSIZE collision (in

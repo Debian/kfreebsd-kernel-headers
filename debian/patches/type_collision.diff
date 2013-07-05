@@ -183,7 +183,7 @@
  #ifndef _RLIM_T_DECLARED
  typedef	__rlim_t	rlim_t;		/* resource limit */
  #define	_RLIM_T_DECLARED
-@@ -269,10 +275,8 @@
+@@ -279,10 +285,8 @@
   * The following are all things that really shouldn't exist in this header,
   * since its purpose is to provide typedefs, not miscellaneous doodads.
   */

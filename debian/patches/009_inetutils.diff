@@ -30,7 +30,7 @@
  #include <sys/sx.h>		/* XXX */
  #include <sys/event.h>		/* XXX */
  #include <sys/_task.h>
-@@ -712,8 +715,19 @@
+@@ -730,8 +733,19 @@
   */
  struct ifaddr {
  	struct	sockaddr *ifa_addr;	/* address of interface */

@@ -577,7 +577,7 @@
  
  struct thread;
  /*
-@@ -790,9 +889,15 @@
+@@ -796,9 +895,15 @@
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS

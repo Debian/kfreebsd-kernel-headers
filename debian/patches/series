@@ -1,6 +1,5 @@
 # Patches from (or merged in) upstream
 000_v4l.diff
-hide_inpcbgroup.diff
 
 # Patches that are in good shape for merging upstream
 

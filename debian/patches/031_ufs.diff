@@ -4,7 +4,7 @@
 
 --- a/sys/ufs/ufs/quota.h
 +++ b/sys/ufs/ufs/quota.h
-@@ -237,7 +237,6 @@
+@@ -238,7 +238,6 @@
  int	setquota(struct thread *, struct mount *, u_long, int, void *);
  int	setuse(struct thread *, struct mount *, u_long, int, void *);
  int	getquotasize(struct thread *, struct mount *, u_long, int, void *);

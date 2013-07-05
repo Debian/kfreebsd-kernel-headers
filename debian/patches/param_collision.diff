@@ -12,7 +12,7 @@
  
  /* 
   * __FreeBSD_kernel_version numbers are documented in the Porter's Handbook.
-@@ -79,11 +76,15 @@
+@@ -95,11 +92,15 @@
  #include <sys/syslimits.h>
  
  #define	MAXCOMLEN	19		/* max command name remembered */
@@ -28,7 +28,7 @@
  #define	NOFILE		OPEN_MAX	/* max open files per process */
  #define	NOGROUP		65535		/* marker for empty group set member */
  #define MAXHOSTNAMELEN	256		/* max hostname size */
-@@ -117,10 +118,12 @@
+@@ -133,10 +134,12 @@
  #include <sys/limits.h>
  #endif
  
@@ -41,7 +41,7 @@
  
  #ifndef BLKDEV_IOSIZE
  #define BLKDEV_IOSIZE  PAGE_SIZE	/* default block device I/O size */
-@@ -197,9 +200,11 @@
+@@ -213,9 +216,11 @@
  #define	PDROP	0x200	/* OR'd with pri to stop re-entry of interlock mutex */
  #define	PBDRY	0x400	/* for PCATCH stop is done on the user boundary */
  
@@ -53,7 +53,7 @@
  #define	NBPW	sizeof(int)	/* number of bytes per word (integer) */
  
  #define	CMASK	022		/* default file mask: S_IWGRP|S_IWOTH */
-@@ -245,6 +250,7 @@
+@@ -261,6 +266,7 @@
  #define	MAXPATHLEN	PATH_MAX
  #define MAXSYMLINKS	32
  
@@ -61,7 +61,7 @@
  /* Bit map related macros. */
  #define	setbit(a,i)	(((unsigned char *)(a))[(i)/NBBY] |= 1<<((i)%NBBY))
  #define	clrbit(a,i)	(((unsigned char *)(a))[(i)/NBBY] &= ~(1<<((i)%NBBY)))
-@@ -252,15 +258,20 @@
+@@ -268,6 +274,7 @@
  	(((const unsigned char *)(a))[(i)/NBBY] & (1<<((i)%NBBY)))
  #define	isclr(a,i)							\
  	((((const unsigned char *)(a))[(i)/NBBY] & (1<<((i)%NBBY))) == 0)
@@ -69,8 +69,9 @@
  
  /* Macros for counting and rounding. */
  #ifndef howmany
- #define	howmany(x, y)	(((x)+((y)-1))/(y))
+@@ -275,9 +282,13 @@
  #endif
+ #define	nitems(x)	(sizeof((x)) / sizeof((x)[0]))
  #define	rounddown(x, y)	(((x)/(y))*(y))
 +#if 0
  #define	roundup(x, y)	((((x)+((y)-1))/(y))*(y))  /* to any y */
