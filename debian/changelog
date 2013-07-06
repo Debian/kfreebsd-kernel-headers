@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (9.1-2) experimental; urgency=low
+kfreebsd-kernel-headers (9.1-1) experimental; urgency=low
 
   * New upstream release.
   * Revert Multiarch switch from last upload. Glibc is not happy about it.
