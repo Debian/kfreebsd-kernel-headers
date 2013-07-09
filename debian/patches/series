@@ -35,3 +35,4 @@ type_collision.diff
 param_collision.diff
 bsd_visible.diff
 050_sigframe.diff
+remove_link_addr_and_link_ntoa.diff
