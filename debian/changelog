@@ -1,3 +1,10 @@
+kfreebsd-kernel-headers (9.1-2) UNRELEASED; urgency=low
+
+  * Bring back DEV_BSIZE, add an assert test to ensure it's consistent
+    with DEV_BSHIFT.
+
+ -- Robert Millan <rmh@debian.org>  Tue, 09 Jul 2013 21:13:25 +0200
+
 kfreebsd-kernel-headers (9.1-1) experimental; urgency=low
 
   * New upstream release.

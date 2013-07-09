@@ -1,4 +1,5 @@
 TESTS = \
+	assert_correct_bsize.o \
 	termios_collision.o \
 	type_collision.o \
 	time_collision.o \
