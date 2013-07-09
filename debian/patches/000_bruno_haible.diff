@@ -304,7 +304,7 @@
  #endif	/* _KERNEL */
  
  /*
-@@ -336,14 +343,13 @@
+@@ -336,14 +343,14 @@
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -318,6 +318,7 @@
 -int	kldsym(int _fileid, int _cmd, void *_data);
 +extern int kldload (__const char *__file) __THROW;
 +extern int kldunload (int __fileid) __THROW;
++extern int kldunloadf(int _fileid, int flags) __THROW;
 +extern int kldfind (__const char *__file) __THROW;
 +extern int kldnext (int __fileid) __THROW;
 +extern int kldstat (int __fileid, struct kld_file_stat *__statp) __THROW;
