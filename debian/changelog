@@ -1,3 +1,10 @@
+kfreebsd-kernel-headers (9.1-4) UNRELEASED; urgency=low
+
+  * Disable a few function declarations in <sys/types.h> which may
+    potentially collide with the ones from Glibc.
+
+ -- Robert Millan <rmh@debian.org>  Sun, 04 Aug 2013 18:07:05 +0200
+
 kfreebsd-kernel-headers (9.1-3) unstable; urgency=low
 
   * Restore kldunloadf().

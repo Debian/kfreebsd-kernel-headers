@@ -195,6 +195,15 @@
  /*
   * minor() gives a cookie instead of an index since we don't want to
   * change the meanings of bits 0-15 or waste time and space shifting
+@@ -297,7 +301,7 @@
+  * <stdio.h> to give broken programs a better chance of working with
+  * 64-bit off_t's.
+  */
+-#ifndef _KERNEL
++#if 0
+ __BEGIN_DECLS
+ #ifndef _FTRUNCATE_DECLARED
+ #define	_FTRUNCATE_DECLARED
 --- a/sys/sys/time.h
 +++ b/sys/sys/time.h
 @@ -36,11 +36,14 @@
@@ -229,8 +238,8 @@
  /*
   * Names of the interval timers, and structure
   * defining a timer setting.
-@@ -273,6 +277,8 @@
- #define TIMER_ABSTIME	0x1	/* absolute timer */
+@@ -279,6 +283,8 @@
+ #define	CPUCLOCK_WHICH_TID	1
  #endif
  
 +#endif
@@ -238,7 +247,7 @@
  #ifdef _KERNEL
  
  /*
-@@ -338,6 +344,7 @@
+@@ -344,6 +350,7 @@
  #include <sys/cdefs.h>
  #include <sys/select.h>
  
@@ -246,7 +255,7 @@
  __BEGIN_DECLS
  int	setitimer(int, const struct itimerval *, struct itimerval *);
  int	utimes(const char *, const struct timeval *);
-@@ -356,6 +363,7 @@
+@@ -363,6 +370,7 @@
  #endif
  
  __END_DECLS
