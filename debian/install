@@ -222,7 +222,6 @@ sys/sys/elf_generic.h                   usr/include/sys
 sys/sys/endian.h                        usr/include/sys
 sys/sys/event.h                         usr/include/sys
 sys/sys/eventhandler.h                  usr/include/sys
-sys/sys/eventvar.h                      usr/include/sys
 sys/sys/exec.h                          usr/include/sys
 sys/sys/extattr.h                       usr/include/sys
 sys/sys/fbio.h                          usr/include/sys
@@ -273,7 +272,6 @@ sys/sys/param.h                         usr/include/sys/kern
 sys/sys/pciio.h                         usr/include/sys
 sys/sys/pcpu.h                          usr/include/sys
 sys/sys/pioctl.h                        usr/include/sys
-sys/sys/pipe.h                          usr/include/sys
 sys/sys/posix4.h                        usr/include/sys
 sys/sys/priority.h                      usr/include/sys
 sys/sys/proc.h                          usr/include/sys
@@ -300,7 +298,6 @@ sys/sys/sysent.h                        usr/include/sys
 sys/sys/syslimits.h                     usr/include/sys
 sys/sys/sysproto.h                      usr/include/sys
 sys/sys/systm.h                         usr/include/sys
-sys/sys/taskqueue.h                     usr/include/sys
 sys/sys/timepps.h                       usr/include/sys
 sys/sys/timers.h                        usr/include/sys
 sys/sys/timespec.h                      usr/include/sys

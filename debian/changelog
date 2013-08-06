@@ -4,6 +4,8 @@ kfreebsd-kernel-headers (9.1-4) UNRELEASED; urgency=low
     potentially collide with the ones from Glibc.
   * Use 'defined(__GNUC__)' rather than '1' when replacing __GNUCLIKE_*
     macros.
+  * Remove headers with no user-serviceable parts: <sys/eventvar.h>,
+    <sys/pipe.h> and <sys/taskqueue.h>.
 
  -- Robert Millan <rmh@debian.org>  Sun, 04 Aug 2013 18:07:05 +0200
 
