@@ -2,6 +2,8 @@ kfreebsd-kernel-headers (9.1-4) UNRELEASED; urgency=low
 
   * Disable a few function declarations in <sys/types.h> which may
     potentially collide with the ones from Glibc.
+  * Use 'defined(__GNUC__)' rather than '1' when replacing __GNUCLIKE_*
+    macros.
 
  -- Robert Millan <rmh@debian.org>  Sun, 04 Aug 2013 18:07:05 +0200
 
