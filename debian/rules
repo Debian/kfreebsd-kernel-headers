@@ -81,6 +81,8 @@ build-arch-stamp:
 		-e 's/#\s*include\s\+<sys\/_termios\.h>\s*/#include <sys\/termios.h>/g' \
 		\
 		-e 's/__size_t/__this_is_a_temporary_kludge__size_t/g' $(shell ## see rev 184135 in GCC SVN ##) \
+		\
+		-e 's/\(\s\|^\|(\)\(__\)\?ino_t\(\s\|)\|;\)/\1__kernel_ino_t\3/g' \
 	; done) ; \
 	echo "#include <sys/kern/param.h>" > misc/osreldate.h
 

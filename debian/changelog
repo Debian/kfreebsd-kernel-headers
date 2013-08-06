@@ -6,6 +6,8 @@ kfreebsd-kernel-headers (9.1-4) UNRELEASED; urgency=low
     macros.
   * Remove headers with no user-serviceable parts: <sys/eventvar.h>,
     <sys/pipe.h> and <sys/taskqueue.h>.
+  * Prevent Glibc ino_t from messing with kernel definition of ino_t
+    (from now on known as '__kernel_ino_t').
 
  -- Robert Millan <rmh@debian.org>  Sun, 04 Aug 2013 18:07:05 +0200
 

@@ -11,6 +11,7 @@ TESTS = \
 	cpufunc.o \
 	devicestat.o \
 	in_pcb.o \
+	ino_t.o \
 	ppp.o \
 	sctp.o \
 	soundcard.o \
