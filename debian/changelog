@@ -1,5 +1,6 @@
-kfreebsd-kernel-headers (9.1-4) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (9.2-1) UNRELEASED; urgency=low
 
+  * New upstream release.
   * Disable a few function declarations in <sys/types.h> which may
     potentially collide with the ones from Glibc.
   * Use 'defined(__GNUC__)' rather than '1' when replacing __GNUCLIKE_*
@@ -13,7 +14,7 @@ kfreebsd-kernel-headers (9.1-4) UNRELEASED; urgency=low
     the rest of the macros from colliding. Add a test for <sys/queue.h>
     collisions.
 
- -- Robert Millan <rmh@debian.org>  Sun, 04 Aug 2013 18:07:05 +0200
+ -- Robert Millan <rmh@debian.org>  Mon, 19 Aug 2013 16:33:59 +0200
 
 kfreebsd-kernel-headers (9.1-3) unstable; urgency=low
 

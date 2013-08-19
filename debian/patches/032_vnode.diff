@@ -4,8 +4,8 @@
 
 --- a/sys/sys/vnode.h
 +++ b/sys/sys/vnode.h
-@@ -40,7 +40,6 @@
- #include <sys/mutex.h>
+@@ -41,7 +41,6 @@
+ #include <sys/rangelock.h>
  #include <sys/selinfo.h>
  #include <sys/uio.h>
 -#include <sys/acl.h>

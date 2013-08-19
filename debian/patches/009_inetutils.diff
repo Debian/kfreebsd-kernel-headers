@@ -30,7 +30,7 @@
  #include <sys/sx.h>		/* XXX */
  #include <sys/event.h>		/* XXX */
  #include <sys/_task.h>
-@@ -730,8 +733,19 @@
+@@ -775,8 +778,19 @@
   */
  struct ifaddr {
  	struct	sockaddr *ifa_addr;	/* address of interface */
@@ -89,16 +89,16 @@
   * is allocated for each interface with an Internet address.
 --- a/sys/sys/fnv_hash.h
 +++ b/sys/sys/fnv_hash.h
-@@ -8,6 +8,8 @@
-  * $FreeBSD$
-  */
+@@ -10,6 +10,8 @@
+ #ifndef _SYS_FNV_HASH_H_
+ #define	_SYS_FNV_HASH_H_
  
 +#include <sys/types.h>
 +
  typedef u_int32_t Fnv32_t;
  typedef u_int64_t Fnv64_t;
  
-@@ -58,7 +60,7 @@
+@@ -60,7 +62,7 @@
  fnv_64_str(const char *str, Fnv64_t hval)
  {
  	const u_int8_t *s = (const u_int8_t *)str;
