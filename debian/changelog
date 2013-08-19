@@ -8,6 +8,10 @@ kfreebsd-kernel-headers (9.1-4) UNRELEASED; urgency=low
     <sys/pipe.h> and <sys/taskqueue.h>.
   * Prevent Glibc ino_t from messing with kernel definition of ino_t
     (from now on known as '__kernel_ino_t').
+  * Revert s/_SYS_QUEUE_H_/_FREEBSD_SYS_QUEUE_H_/ sed rule. We actually
+    want header protection to match with GNU <sys/queue.h> as to prevent
+    the rest of the macros from colliding. Add a test for <sys/queue.h>
+    collisions.
 
  -- Robert Millan <rmh@debian.org>  Sun, 04 Aug 2013 18:07:05 +0200
 

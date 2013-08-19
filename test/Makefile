@@ -4,6 +4,7 @@ TESTS = \
 	type_collision.o \
 	time_collision.o \
 	param_collision.o \
+	queue_collision.o \
 	limits_collision.o \
 	uintXX_t.o \
 	\
