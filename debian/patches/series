@@ -36,3 +36,4 @@ param_collision.diff
 bsd_visible.diff
 050_sigframe.diff
 remove_link_addr_and_link_ntoa.diff
+queue_bsd_extensions.diff

@@ -13,6 +13,9 @@ kfreebsd-kernel-headers (9.2-1) UNRELEASED; urgency=low
     want header protection to match with GNU <sys/queue.h> as to prevent
     the rest of the macros from colliding. Add a test for <sys/queue.h>
     collisions.
+  * Move the "BSD extensions" (so to speak) of <sys/queue.h> off the
+    GNU-compatible header protection. This will make them available even
+    if GNU <sys/queue.h> had been included.
 
  -- Robert Millan <rmh@debian.org>  Mon, 19 Aug 2013 16:33:59 +0200
 
