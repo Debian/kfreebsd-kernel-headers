@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (9.2-1) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (9.2~1) unstable; urgency=low
 
   * New upstream release.
   * Disable a few function declarations in <sys/types.h> which may
@@ -9,13 +9,9 @@ kfreebsd-kernel-headers (9.2-1) UNRELEASED; urgency=low
     <sys/pipe.h> and <sys/taskqueue.h>.
   * Prevent Glibc ino_t from messing with kernel definition of ino_t
     (from now on known as '__kernel_ino_t').
-  * Revert s/_SYS_QUEUE_H_/_FREEBSD_SYS_QUEUE_H_/ sed rule. We actually
-    want header protection to match with GNU <sys/queue.h> as to prevent
-    the rest of the macros from colliding. Add a test for <sys/queue.h>
-    collisions.
   * Fix collisions in <sys/queue.h>.
 
- -- Robert Millan <rmh@debian.org>  Mon, 19 Aug 2013 16:33:59 +0200
+ -- Robert Millan <rmh@debian.org>  Tue, 20 Aug 2013 11:33:06 +0200
 
 kfreebsd-kernel-headers (9.1-3) unstable; urgency=low
 
