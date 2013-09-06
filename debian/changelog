@@ -1,3 +1,10 @@
+kfreebsd-kernel-headers (9.2~2) unstable; urgency=high
+
+  * Install <sys/rangelock.h> (now required by <sys/vnode.h>) and add
+    header buildability check to testsuite.
+
+ -- Robert Millan <rmh@debian.org>  Fri, 06 Sep 2013 21:58:15 +0200
+
 kfreebsd-kernel-headers (9.2~1) unstable; urgency=low
 
   * New upstream release.
