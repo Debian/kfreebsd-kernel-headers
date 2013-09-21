@@ -122,6 +122,7 @@ sys/netgraph/bluetooth/l2cap/*.h        usr/include/netgraph/bluetooth/l2cap
 sys/netgraph/netflow/*.h                usr/include/netgraph/netflow
 sys/netinet/icmp_var.h                  usr/include/netinet
 sys/netinet/if_atm.h                    usr/include/netinet
+sys/netinet/if_ether.h			usr/include/kglue/netinet
 sys/netinet/igmp_var.h                  usr/include/netinet
 sys/netinet/in_gif.h                    usr/include/netinet
 sys/netinet/in_pcb.h                    usr/include/netinet
