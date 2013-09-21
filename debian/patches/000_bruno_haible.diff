@@ -244,7 +244,7 @@
  #define	_SYS_FILEDESC_H_
  
 +#include <sys/types.h>
- #include <sys/kern/queue.h>
+ #include <kglue/sys/queue.h>
  #include <sys/event.h>
  #include <sys/lock.h>
 @@ -45,7 +46,7 @@
@@ -334,7 +334,7 @@
  #define _SYS_LOCK_H_
  
 +#include <sys/types.h>
- #include <sys/kern/queue.h>
+ #include <kglue/sys/queue.h>
  #include <sys/_lock.h>
  
 --- a/sys/sys/memrange.h
@@ -375,7 +375,7 @@
 @@ -35,6 +35,8 @@
  
  #include <sys/resource.h>
- #include <sys/kern/queue.h>
+ #include <kglue/sys/queue.h>
 +#include <sys/time.h>
 +#include <sys/types.h>
  #ifdef _KERNEL
@@ -474,11 +474,11 @@
  #ifndef _SYS_SYSCTL_H_
  #define	_SYS_SYSCTL_H_
  
--#include <sys/kern/queue.h>
+-#include <kglue/sys/queue.h>
 +#include <features.h>
 +#define __need_size_t
 +#include <stddef.h>
-+#include <sys/kern/types.h>	/* required by <vm/vm_param.h> */
++#include <kglue/sys/types.h>	/* required by <vm/vm_param.h> */
 +#include <vm/vm_param.h>
 +
 +/****************************************  Stolen from sys/mount.h */
@@ -606,7 +606,7 @@
 +#include <stddef.h>
 +#include <sys/time.h>
  #include <sys/ioccom.h>
- #include <sys/kern/time.h>
+ #include <kglue/sys/time.h>
  
 --- a/sys/sys/timex.h
 +++ b/sys/sys/timex.h

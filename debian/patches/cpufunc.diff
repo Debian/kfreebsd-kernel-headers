@@ -24,7 +24,7 @@ See #660396
 @@ -60,6 +60,7 @@
  #define	_MACHINE_CPUFUNC_H_
  
- #include <sys/kern/types.h>
+ #include <kglue/sys/types.h>
 +#include <stdint.h>
  #include <machine/cpuregs.h>
  

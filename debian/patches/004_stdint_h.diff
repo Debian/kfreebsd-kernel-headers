@@ -119,7 +119,7 @@
 @@ -39,6 +39,7 @@
  #define	_SYS_BIO_H_
  
- #include <sys/kern/queue.h>
+ #include <kglue/sys/queue.h>
 +#include <stdint.h>
  
  /* bio_cmd */
@@ -128,8 +128,8 @@
 +++ b/sys/sys/devicestat.h
 @@ -33,6 +33,7 @@
  
- #include <sys/kern/queue.h>
- #include <sys/kern/time.h>
+ #include <kglue/sys/queue.h>
+ #include <kglue/sys/time.h>
 +#include <stdint.h>
  
  /*
@@ -174,7 +174,7 @@
 @@ -20,6 +20,7 @@
  
  #ifndef _KERNEL
- #include <sys/kern/types.h>
+ #include <kglue/sys/types.h>
 +#include <stdint.h>
  #endif
  #include <sys/ioccom.h>

@@ -72,10 +72,10 @@ build-arch-stamp:
 		-e 's/#\s*ifdef\s*_SYS_CDEFS_H_\(\s\|$$\)/#ifdef _SYS_CDEFS_H/g' \
 		-e 's/#\s*ifndef\s*_SYS_CDEFS_H_\(\s\|$$\)/#ifndef _SYS_CDEFS_H/g' \
 		\
-		-e 's/#\s*include\s\+<sys\/types\.h>\s*/#include <sys\/kern\/types.h>/g' \
-		-e 's/#\s*include\s\+<sys\/time\.h>\s*/#include <sys\/kern\/time.h>/g' \
-		-e 's/#\s*include\s\+<sys\/param\.h>\s*/#include <sys\/kern\/param.h>/g' \
-		-e 's/#\s*include\s\+<sys\/queue\.h>\s*/#include <sys\/kern\/queue.h>/g' \
+		-e 's/#\s*include\s\+<sys\/types\.h>\s*/#include <kglue\/sys\/types.h>/g' \
+		-e 's/#\s*include\s\+<sys\/time\.h>\s*/#include <kglue\/sys\/time.h>/g' \
+		-e 's/#\s*include\s\+<sys\/param\.h>\s*/#include <kglue\/sys\/param.h>/g' \
+		-e 's/#\s*include\s\+<sys\/queue\.h>\s*/#include <kglue\/sys\/queue.h>/g' \
 		-e 's/#\s*include\s\+<sys\/_termios\.h>\s*/#include <sys\/termios.h>/g' \
 		\
 		-e 's/__size_t/__this_is_a_temporary_kludge__size_t/g' $(shell ## see rev 184135 in GCC SVN ##) \

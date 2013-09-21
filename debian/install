@@ -268,7 +268,7 @@ sys/sys/mutex.h                         usr/include/sys
 sys/sys/namei.h                         usr/include/sys
 sys/sys/nlist_aout.h                    usr/include/sys
 sys/sys/osd.h                           usr/include/sys
-sys/sys/param.h                         usr/include/sys/kern
+sys/sys/param.h                         usr/include/kglue/sys
 sys/sys/pciio.h                         usr/include/sys
 sys/sys/pcpu.h                          usr/include/sys
 sys/sys/pioctl.h                        usr/include/sys
@@ -278,7 +278,7 @@ sys/sys/proc.h                          usr/include/sys
 sys/sys/procfs.h                        usr/include/sys
 sys/sys/protosw.h                       usr/include/sys
 sys/sys/ptio.h                          usr/include/sys
-sys/sys/queue.h				usr/include/sys/kern
+sys/sys/queue.h				usr/include/kglue/sys
 sys/sys/rangelock.h			usr/include/sys
 sys/sys/random.h                        usr/include/sys
 sys/sys/refcount.h                      usr/include/sys
@@ -307,8 +307,8 @@ sys/sys/tree.h                          usr/include/sys
 sys/sys/tty.h                           usr/include/sys
 sys/sys/ttycom.h                        usr/include/sys
 sys/sys/ttyqueue.h                      usr/include/sys
-sys/sys/time.h				usr/include/sys/kern
-sys/sys/types.h				usr/include/sys/kern
+sys/sys/time.h				usr/include/kglue/sys
+sys/sys/types.h				usr/include/kglue/sys
 sys/sys/ucred.h                         usr/include/sys
 sys/sys/unpcb.h                         usr/include/sys
 sys/sys/user.h                          usr/include/sys

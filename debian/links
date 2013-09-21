@@ -1,2 +1,3 @@
 usr/include/opencrypto			usr/include/crypto
 usr/include/fs/cd9660			usr/include/isofs/cd9660
+usr/include/kglue/sys			usr/include/sys/kern
