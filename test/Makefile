@@ -18,6 +18,7 @@ TESTS = \
 	soundcard.o \
 	sys_sysctl.o \
 	sys_timex.o \
+	sys_user.o \
 	sys_vnode.o \
 	stdarg.o \
 	usb.o \
