@@ -17,6 +17,7 @@ TESTS = \
 	sctp.o \
 	soundcard.o \
 	sys_sysctl.o \
+	sys_timex.o \
 	sys_vnode.o \
 	stdarg.o \
 	usb.o \
