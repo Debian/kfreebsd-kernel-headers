@@ -20,7 +20,6 @@ cpufunc.diff
 020_concat_elf_generic.diff
 022_sys_buf_h.diff
 024_ioccom.diff
-026_acpiio.diff
 027_ktrace.diff
 029_conf.diff
 030_pfvar.diff

@@ -1,3 +1,9 @@
+kfreebsd-kernel-headers (9.2~3) UNRELEASED; urgency=low
+
+  * Remove 026_acpiio.diff (redundant).
+
+ -- Robert Millan <rmh@debian.org>  Sat, 21 Sep 2013 17:07:34 +0200
+
 kfreebsd-kernel-headers (9.2~2) unstable; urgency=high
 
   * Install <sys/rangelock.h> (now required by <sys/vnode.h>) and add
