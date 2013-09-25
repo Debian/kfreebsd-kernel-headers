@@ -122,7 +122,7 @@ sys/netgraph/bluetooth/l2cap/*.h        usr/include/netgraph/bluetooth/l2cap
 sys/netgraph/netflow/*.h                usr/include/netgraph/netflow
 sys/netinet/icmp_var.h                  usr/include/netinet
 sys/netinet/if_atm.h                    usr/include/netinet
-sys/netinet/if_ether.h			usr/include/kglue/netinet
+sys/netinet/if_ether.h			usr/include/sys/kglue/netinet
 sys/netinet/igmp_var.h                  usr/include/netinet
 sys/netinet/in_gif.h                    usr/include/netinet
 sys/netinet/in_pcb.h                    usr/include/netinet
@@ -269,7 +269,7 @@ sys/sys/mutex.h                         usr/include/sys
 sys/sys/namei.h                         usr/include/sys
 sys/sys/nlist_aout.h                    usr/include/sys
 sys/sys/osd.h                           usr/include/sys
-sys/sys/param.h                         usr/include/kglue/sys
+sys/sys/param.h                         usr/include/sys/kglue/sys
 sys/sys/pciio.h                         usr/include/sys
 sys/sys/pcpu.h                          usr/include/sys
 sys/sys/pioctl.h                        usr/include/sys
@@ -279,7 +279,7 @@ sys/sys/proc.h                          usr/include/sys
 sys/sys/procfs.h                        usr/include/sys
 sys/sys/protosw.h                       usr/include/sys
 sys/sys/ptio.h                          usr/include/sys
-sys/sys/queue.h				usr/include/kglue/sys
+sys/sys/queue.h				usr/include/sys/kglue/sys
 sys/sys/rangelock.h			usr/include/sys
 sys/sys/random.h                        usr/include/sys
 sys/sys/refcount.h                      usr/include/sys
@@ -308,8 +308,8 @@ sys/sys/tree.h                          usr/include/sys
 sys/sys/tty.h                           usr/include/sys
 sys/sys/ttycom.h                        usr/include/sys
 sys/sys/ttyqueue.h                      usr/include/sys
-sys/sys/time.h				usr/include/kglue/sys
-sys/sys/types.h				usr/include/kglue/sys
+sys/sys/time.h				usr/include/sys/kglue/sys
+sys/sys/types.h				usr/include/sys/kglue/sys
 sys/sys/ucred.h                         usr/include/sys
 sys/sys/unpcb.h                         usr/include/sys
 sys/sys/user.h                          usr/include/sys

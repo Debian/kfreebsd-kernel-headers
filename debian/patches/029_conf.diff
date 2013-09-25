@@ -5,6 +5,6 @@
  #include <sys/eventhandler.h>
  #else
 +#include <sys/param.h>		/* SPECNAMELEN */
- #include <kglue/sys/queue.h>
+ #include <sys/kglue/sys/queue.h>
  #endif
  

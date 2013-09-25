@@ -6,7 +6,7 @@
 +++ b/sys/sys/event.h
 @@ -31,6 +31,8 @@
  
- #include <kglue/sys/queue.h>
+ #include <sys/kglue/sys/queue.h>
  
 +#include <stdint.h>
 +

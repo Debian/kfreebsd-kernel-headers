@@ -58,8 +58,8 @@
 +++ b/sys/sys/devicestat.h
 @@ -33,6 +33,8 @@
  
- #include <kglue/sys/queue.h>
- #include <kglue/sys/time.h>
+ #include <sys/kglue/sys/queue.h>
+ #include <sys/kglue/sys/time.h>
 +#include <sys/_types.h>
 +#include <sys/resource.h>
  #include <stdint.h>

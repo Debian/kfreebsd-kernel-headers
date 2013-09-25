@@ -2,9 +2,9 @@ kfreebsd-kernel-headers (9.2~3) UNRELEASED; urgency=low
 
   * Remove 026_acpiio.diff (redundant).
   * sys_timex.c: Check <sys/timex.h> buildability.
-  * Move <sys/kern> to <kglue/sys> to make its origin clearer and make
-    room for <kglue/netinet>, etc.
-  * Add <kglue/netinet/if_ether.h> using patch from original port.
+  * Move <sys/kern> to <sys/kglue/sys> to make its origin clearer and make
+    room for <sys/kglue/netinet>, etc.
+  * Add <sys/kglue/netinet/if_ether.h> using patch from original port.
   * sys_user.c: Check <sys/user.h> buildability.
 
  -- Robert Millan <rmh@debian.org>  Sat, 21 Sep 2013 17:07:34 +0200

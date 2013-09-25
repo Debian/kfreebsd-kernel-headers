@@ -10,6 +10,6 @@
  
 -#include <sys/bufobj.h>
 +#include <sys/_types.h>
- #include <kglue/sys/queue.h>
+ #include <sys/kglue/sys/queue.h>
  #include <sys/lock.h>
  #include <sys/lockmgr.h>
