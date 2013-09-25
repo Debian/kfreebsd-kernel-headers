@@ -26,7 +26,7 @@ TESTS = \
 
 #	elf.o
 
-CFLAGS = -Iinclude -I../debian/kfreebsd-kernel-headers/usr/include
+CFLAGS = -I. -I../debian/kfreebsd-kernel-headers/usr/include
 
 # Enable all the stuff in glibc to probe for collisions
 CFLAGS += -D_GNU_SOURCE -Werror -Wsystem-headers

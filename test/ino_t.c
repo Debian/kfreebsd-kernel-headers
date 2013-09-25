@@ -9,8 +9,10 @@
 #include <ufs/ufs/quota.h>
 #include <ufs/ufs/inode.h>
 
+#include "assert.h"
+
 #define ASSERT_SIZE(N, STRUCT, MEMBER, SIZE) \
-	static char __assert_ ## N [(sizeof (((struct STRUCT *) NULL)->MEMBER) == SIZE) ? 0 : -1]
+	COMPILE_TIME_ASSERT(N, (sizeof (((struct STRUCT *) NULL)->MEMBER) == SIZE))
 
 ASSERT_SIZE(1, fs, fs_snapinum[0], 4);
 ASSERT_SIZE(2, jrefrec, jr_ino, 4);

@@ -6,6 +6,7 @@ kfreebsd-kernel-headers (9.2~3) UNRELEASED; urgency=low
     room for <sys/kglue/netinet>, etc.
   * Add <sys/kglue/netinet/if_ether.h> using patch from original port.
   * sys_user.c: Check <sys/user.h> buildability.
+  * Simplify asserts using COMPILE_TIME_ASSERT() macro.
 
  -- Robert Millan <rmh@debian.org>  Sat, 21 Sep 2013 17:07:34 +0200
 
