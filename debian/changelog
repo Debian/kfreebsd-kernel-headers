@@ -12,6 +12,7 @@ kfreebsd-kernel-headers (9.2~3) UNRELEASED; urgency=low
   * Filter out __used in debian/rules.
   * Install trimmed version of <sys/socket.h> and check for collisions
     in testsuite.
+  * Fix sig_atomic_t collision and add sig_atomic_collision.c test.
 
  -- Robert Millan <rmh@debian.org>  Sat, 21 Sep 2013 17:07:34 +0200
 

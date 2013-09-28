@@ -3,6 +3,7 @@ TESTS = \
 	endian_collision.o \
 	socket_collision.o \
 	signal_collision.o \
+	sig_atomic_collision.o \
 	termios_collision.o \
 	type_collision.o \
 	time_collision.o \
