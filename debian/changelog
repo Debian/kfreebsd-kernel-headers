@@ -10,6 +10,8 @@ kfreebsd-kernel-headers (9.2~3) UNRELEASED; urgency=low
   * endian_collision.diff: Fix collisions in endian.h. Verify using
     asserts (test/endian_collision.c).
   * Filter out __used in debian/rules.
+  * Install trimmed version of <sys/socket.h> and check for collisions
+    in testsuite.
 
  -- Robert Millan <rmh@debian.org>  Sat, 21 Sep 2013 17:07:34 +0200
 

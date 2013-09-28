@@ -179,6 +179,7 @@ sys/sys/_mutex.h                        usr/include/sys
 sys/sys/_null.h                         usr/include/sys
 sys/sys/_rwlock.h                       usr/include/sys
 sys/sys/_semaphore.h                    usr/include/sys
+sys/sys/_sigset.h			usr/include/sys
 sys/sys/_sx.h                           usr/include/sys
 sys/sys/_stdint.h			usr/include/sys
 sys/sys/_task.h                         usr/include/sys
@@ -292,6 +293,7 @@ sys/sys/selinfo.h                       usr/include/sys
 sys/sys/sigio.h                         usr/include/sys
 sys/sys/signalvar.h                     usr/include/sys
 sys/sys/snoop.h                         usr/include/sys
+sys/sys/socket.h			usr/include/sys/kglue/sys
 sys/sys/sockio.h                        usr/include/sys
 sys/sys/soundcard.h                     usr/include/sys
 sys/sys/sx.h                            usr/include/sys
