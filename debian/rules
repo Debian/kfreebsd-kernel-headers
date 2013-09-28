@@ -102,6 +102,7 @@ install-arch: build-arch
 	dh_prep
 	dh_installdirs
 	dh_install --sourcedir=$(CURDIR)
+	dh_link
 
 ifneq ($(filter amd64, $(kfreebsd_cpu)),)
 	sh debian/generate-asm.sh $(kfreebsd_cpu) $(CURDIR)/sys $(HEADERS_PACKAGE)/usr/include
@@ -136,7 +137,6 @@ binary-arch: install-arch
 	dh_installdocs
 #	dh_installman
 	dh_installchangelogs
-	dh_link
 	dh_strip
 	dh_compress
 	dh_fixperms
