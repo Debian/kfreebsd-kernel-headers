@@ -23,3 +23,29 @@ __bswapXX.
  
  /* Alignment-agnostic encode/decode bytestream to/from little/big endian. */
  
+--- a/sys/amd64/include/endian.h
++++ b/sys/amd64/include/endian.h
+@@ -60,7 +60,9 @@
+  * Deprecated variants that don't have enough underscores to be useful in more
+  * strict namespaces.
+  */
+-#if __BSD_VISIBLE
++#if 1
++#include <endian.h>
++#else
+ #define	LITTLE_ENDIAN	_LITTLE_ENDIAN
+ #define	BIG_ENDIAN	_BIG_ENDIAN
+ #define	PDP_ENDIAN	_PDP_ENDIAN
+--- a/sys/i386/include/endian.h
++++ b/sys/i386/include/endian.h
+@@ -60,7 +60,9 @@
+  * Deprecated variants that don't have enough underscores to be useful in more
+  * strict namespaces.
+  */
+-#if __BSD_VISIBLE
++#if 1
++#include <endian.h>
++#else
+ #define	LITTLE_ENDIAN	_LITTLE_ENDIAN
+ #define	BIG_ENDIAN	_BIG_ENDIAN
+ #define	PDP_ENDIAN	_PDP_ENDIAN

@@ -1,5 +1,6 @@
 TESTS = \
 	assert_correct_bsize.o \
+	endian_collision.o \
 	termios_collision.o \
 	type_collision.o \
 	time_collision.o \
