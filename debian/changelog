@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (9.2~3) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (9.2~3) unstable; urgency=low
 
   * Remove 026_acpiio.diff (redundant).
   * sys_timex.c: Check <sys/timex.h> buildability.
@@ -16,7 +16,7 @@ kfreebsd-kernel-headers (9.2~3) UNRELEASED; urgency=low
   * test/type_collision.c: Include all types from glibc that may
     potentially conflict with <sys/kern/types.h>.
 
- -- Robert Millan <rmh@debian.org>  Sat, 21 Sep 2013 17:07:34 +0200
+ -- Robert Millan <rmh@debian.org>  Wed, 02 Oct 2013 23:52:47 +0200
 
 kfreebsd-kernel-headers (9.2~2) unstable; urgency=high
 
