@@ -331,3 +331,9 @@ misc/videodev2.h			usr/include/linux
 # abusing this path for __FreeBSD_kernel_version definition (needed
 # by glibc).
 misc/osreldate.h			usr/include
+
+# For backward compatibility with kern -> kglue transition
+misc/kern/param.h			usr/include/sys/kern
+misc/kern/queue.h			usr/include/sys/kern
+misc/kern/time.h			usr/include/sys/kern
+misc/kern/types.h			usr/include/sys/kern

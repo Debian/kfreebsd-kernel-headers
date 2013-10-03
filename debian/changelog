@@ -1,3 +1,10 @@
+kfreebsd-kernel-headers (9.2~4) unstable; urgency=low
+
+  * Use stub headers for sys/kern rename instead of symlink.
+    (Closes: #725273)
+
+ -- Robert Millan <rmh@debian.org>  Thu, 03 Oct 2013 19:57:08 +0200
+
 kfreebsd-kernel-headers (9.2~3) unstable; urgency=low
 
   * Remove 026_acpiio.diff (redundant).

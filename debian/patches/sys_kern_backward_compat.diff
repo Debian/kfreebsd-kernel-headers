@@ -1,0 +1,16 @@
+--- /dev/null
++++ b/misc/kern/param.h
+@@ -0,0 +1 @@
++#include <sys/kglue/sys/param.h>
+--- /dev/null
++++ b/misc/kern/queue.h
+@@ -0,0 +1 @@
++#include <sys/kglue/sys/queue.h>
+--- /dev/null
++++ b/misc/kern/time.h
+@@ -0,0 +1 @@
++#include <sys/kglue/sys/time.h>
+--- /dev/null
++++ b/misc/kern/types.h
+@@ -0,0 +1 @@
++#include <sys/kglue/sys/types.h>

@@ -38,3 +38,4 @@ remove_link_addr_and_link_ntoa.diff
 queue_collision.diff
 sys_socket.diff
 signal_collision.diff
+sys_kern_backward_compat.diff
