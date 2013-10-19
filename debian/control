@@ -3,7 +3,6 @@ Section: kernel
 Priority: standard
 Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
 Uploaders: Aurelien Jarno <aurel32@debian.org>,
- Guillem Jover <guillem@debian.org>,
  Robert Millan <rmh@debian.org>
 Build-Depends: debhelper (>= 7), quilt, kfreebsd-source-9.2,
 Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/kfreebsd-kernel-headers/
