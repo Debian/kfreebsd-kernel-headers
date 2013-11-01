@@ -256,6 +256,7 @@ sys/sys/lock.h                          usr/include/sys
 sys/sys/lock_profile.h                  usr/include/sys
 sys/sys/lockf.h                         usr/include/sys
 sys/sys/lockmgr.h                       usr/include/sys
+sys/sys/mac.h				usr/include/sys
 sys/sys/malloc.h                        usr/include/sys
 sys/sys/mbuf.h                          usr/include/sys
 sys/sys/mchain.h                        usr/include/sys

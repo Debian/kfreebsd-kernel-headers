@@ -1,8 +1,12 @@
 kfreebsd-kernel-headers (9.2~5) UNRELEASED; urgency=low
 
+  [ Guillem Jover ]
   * Remove myself from Uploaders.
 
- -- Guillem Jover <guillem@debian.org>  Sun, 13 Oct 2013 00:58:34 +0200
+  [ Robert Millan ]
+  * Add <sys/mac.h>.
+
+ -- Robert Millan <rmh@debian.org>  Fri, 01 Nov 2013 14:10:16 +0100
 
 kfreebsd-kernel-headers (9.2~4) unstable; urgency=low
 
