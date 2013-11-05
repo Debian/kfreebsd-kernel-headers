@@ -338,3 +338,5 @@ misc/kern/param.h			usr/include/sys/kern
 misc/kern/queue.h			usr/include/sys/kern
 misc/kern/time.h			usr/include/sys/kern
 misc/kern/types.h			usr/include/sys/kern
+
+misc/sys/stdint.h			usr/include/sys

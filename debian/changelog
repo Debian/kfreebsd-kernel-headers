@@ -5,6 +5,7 @@ kfreebsd-kernel-headers (9.2~5) UNRELEASED; urgency=low
 
   [ Robert Millan ]
   * Add <sys/mac.h>.
+  * Add <sys/stdint.h> (as #include stub).
 
  -- Robert Millan <rmh@debian.org>  Fri, 01 Nov 2013 14:10:16 +0100
 

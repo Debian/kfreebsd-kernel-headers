@@ -40,7 +40,7 @@ build-arch-stamp:
 	dh_testdir
 
 	tar xfJ $(SRC_TAR) --wildcards --strip-components=1 "*.h"
-	mkdir -p misc
+	mkdir -p misc/sys
 
 	set -e ; \
 	find sys -type f | (while read i ; do \
@@ -83,8 +83,9 @@ build-arch-stamp:
 		-e 's/__size_t/__this_is_a_temporary_kludge__size_t/g' $(shell ## see rev 184135 in GCC SVN ##) \
 		\
 		-e 's/\(\s\|^\|(\)\(__\)\?ino_t\(\s\|)\|;\)/\1__kernel_ino_t\3/g' \
-	; done) ; \
+	; done)
 	echo "#include <sys/kern/param.h>" > misc/osreldate.h
+	echo "#include <stdint.h>" > misc/sys/stdint.h
 
 	QUILT_PATCHES=$(CURDIR)/debian/patches quilt push -a || test $$? = 2
 
