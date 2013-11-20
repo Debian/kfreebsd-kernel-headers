@@ -77,3 +77,26 @@
  
  #endif /* __BSD_VISIBLE */
  
+--- a/sys/sys/signal.h
++++ b/sys/sys/signal.h
+@@ -45,6 +45,13 @@
+ #include <machine/_limits.h>	/* __MINSIGSTKSZ */
+ #include <machine/signal.h>	/* sig_atomic_t; trap codes; sigcontext */
+ 
++/* For now just disable everything except the implicit includes.
++   TODO: We might want to enable some things below, as long as they don't
++   collide with GNU version of <sys/signal.h>.  */
++#ifdef __GLIBC__
++#include <sys/signal.h>
++#else
++
+ /*
+  * System defined signals.
+  */
+@@ -440,4 +447,6 @@
+ __sighandler_t *signal(int, __sighandler_t *);
+ __END_DECLS
+ 
++#endif
++
+ #endif /* !_SYS_SIGNAL_H_ */

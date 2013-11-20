@@ -76,6 +76,7 @@ build-arch-stamp:
 		-e 's/#\s*include\s\+<sys\/types\.h>\s*/#include <sys\/kglue\/sys\/types.h>/g' \
 		-e 's/#\s*include\s\+<sys\/time\.h>\s*/#include <sys\/kglue\/sys\/time.h>/g' \
 		-e 's/#\s*include\s\+<sys\/param\.h>\s*/#include <sys\/kglue\/sys\/param.h>/g' \
+		-e 's/#\s*include\s\+<sys\/signal\.h>\s*/#include <sys\/kglue\/sys\/signal.h>/g' \
 		-e 's/#\s*include\s\+<sys\/queue\.h>\s*/#include <sys\/kglue\/sys\/queue.h>/g' \
 		-e 's/#\s*include\s\+<netinet\/if_ether\.h>\s*/#include <sys\/kglue\/netinet\/if_ether.h>/g' \
 		-e 's/#\s*include\s\+<sys\/_termios\.h>\s*/#include <sys\/termios.h>/g' \

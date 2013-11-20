@@ -292,6 +292,7 @@ sys/sys/runq.h                          usr/include/sys
 sys/sys/sdt.h                           usr/include/sys
 sys/sys/selinfo.h                       usr/include/sys
 sys/sys/sigio.h                         usr/include/sys
+sys/sys/signal.h			usr/include/sys/kglue/sys
 sys/sys/signalvar.h                     usr/include/sys
 sys/sys/snoop.h                         usr/include/sys
 sys/sys/socket.h			usr/include/sys/kglue/sys
