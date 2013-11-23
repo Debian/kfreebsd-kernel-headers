@@ -20,6 +20,7 @@ TESTS = \
 	ppp.o \
 	sctp.o \
 	soundcard.o \
+	sys_file.o \
 	sys_sysctl.o \
 	sys_timex.o \
 	sys_user.o \

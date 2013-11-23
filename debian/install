@@ -227,6 +227,7 @@ sys/sys/eventhandler.h                  usr/include/sys
 sys/sys/exec.h                          usr/include/sys
 sys/sys/extattr.h                       usr/include/sys
 sys/sys/fbio.h                          usr/include/sys
+sys/sys/file.h				usr/include/sys/kglue/sys
 sys/sys/filedesc.h                      usr/include/sys
 sys/sys/filio.h                         usr/include/sys
 sys/sys/fnv_hash.h                      usr/include/sys
