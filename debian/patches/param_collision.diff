@@ -19,7 +19,7 @@
 +#if 0
  #define	MAXINTERP	PATH_MAX	/* max interpreter file name length */
 +#endif
- #define	MAXLOGNAME	17		/* max login name length (incl. NUL) */
+ #define	__kernel_MAXLOGNAME	17		/* max login name length (incl. NUL) */
  #define	MAXUPRC		CHILD_MAX	/* max simultaneous processes */
  #define	NCARGS		ARG_MAX		/* max bytes for an exec function */
 +#if 0

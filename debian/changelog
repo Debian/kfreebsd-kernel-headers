@@ -1,3 +1,10 @@
+kfreebsd-kernel-headers (9.2~6) unstable; urgency=low
+
+  * Rename MAXLOGNAME to __kernel_MAXLOGNAME to avoid collision with
+    Glibc (which now sets MAXLOGNAME to a different value).
+
+ -- Robert Millan <rmh@debian.org>  Thu, 02 Jan 2014 16:20:12 +0100
+
 kfreebsd-kernel-headers (9.2~5) unstable; urgency=low
 
   [ Guillem Jover ]

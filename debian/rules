@@ -84,6 +84,7 @@ build-arch-stamp:
 		-e 's/__size_t/__this_is_a_temporary_kludge__size_t/g' $(shell ## see rev 184135 in GCC SVN ##) \
 		\
 		-e 's/\(\s\|^\|(\)\(__\)\?ino_t\(\s\|)\|;\)/\1__kernel_ino_t\3/g' \
+		-e 's/\(\s\|^\|(\)\(__\)\?MAXLOGNAME\(\s\|)\|;\)/\1__kernel_MAXLOGNAME\3/g' \
 	; done)
 	echo "#include <sys/kern/param.h>" > misc/osreldate.h
 	echo "#include <stdint.h>" > misc/sys/stdint.h
