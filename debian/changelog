@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (10.0~1) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (10.0~1) experimental; urgency=low
 
   * New upstream release.
     - Refresh all patches.
