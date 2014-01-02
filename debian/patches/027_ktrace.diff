@@ -4,7 +4,7 @@
 
 --- a/sys/sys/ktrace.h
 +++ b/sys/sys/ktrace.h
-@@ -35,6 +35,17 @@
+@@ -37,6 +37,17 @@
  
  #include <sys/types.h>
  

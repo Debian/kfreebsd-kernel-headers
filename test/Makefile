@@ -1,5 +1,6 @@
 TESTS = \
 	assert_correct_bsize.o \
+	assert_wchar_size.o \
 	endian_collision.o \
 	socket_collision.o \
 	signal_collision.o \
@@ -14,6 +15,7 @@ TESTS = \
 	\
 	bus.o \
 	cpufunc.o \
+	cpuset.o \
 	devicestat.o \
 	in_pcb.o \
 	ino_t.o \

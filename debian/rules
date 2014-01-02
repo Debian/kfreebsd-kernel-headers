@@ -45,12 +45,6 @@ build-arch-stamp:
 	set -e ; \
 	find sys -type f | (while read i ; do \
 	sed -i $$i \
-		-e 's/defined\s*(\s*__FreeBSD__\s*)/1/g' \
-		-e 's/#\s*ifdef\s*__FreeBSD__\(\s\|$$\)/#if 1/g' \
-		-e 's/#\s*ifndef\s*__FreeBSD__\(\s\|$$\)/#if 0/g' \
-		-e 's/__FreeBSD__/$(major)/g' \
-		\
-		-e "s/__FreeBSD_version/__FreeBSD_kernel_version/g" \
 		\
 		-e 's/defined\s*(\s*__GNUCLIKE_[A-Z_]\+\s*)/defined(__GNUC__)/g' \
 		-e 's/#\s*ifdef\s*__GNUCLIKE_[A-Z_]\+\(\s\|$$\)/#if defined(__GNUC__)/g' \
@@ -85,9 +79,20 @@ build-arch-stamp:
 		\
 		-e 's/\(\s\|^\|(\)\(__\)\?ino_t\(\s\|)\|;\)/\1__kernel_ino_t\3/g' \
 		-e 's/\(\s\|^\|(\)\(__\)\?MAXLOGNAME\(\s\|)\|;\)/\1__kernel_MAXLOGNAME\3/g' \
+		-e 's/\(\s\|^\|(\)\(__\)\?WCHAR_MAX\(\s\|)\|;\)/\1__kernel_WCHAR_MAX\3/g' \
+		-e 's/\(\s\|^\|(\)\(__\)\?WCHAR_MIN\(\s\|)\|;\)/\1__kernel_WCHAR_MIN\3/g' \
 	; done)
 	echo "#include <sys/kern/param.h>" > misc/osreldate.h
 	echo "#include <stdint.h>" > misc/sys/stdint.h
+
+	# Revert the kglue redirection when mistakenly applied to headers that want to
+	# include the GNU version (otherwise they'll just be including themselves!)
+	sed -e 's/#\s*include\s\+<sys\/kglue\/sys\/types\.h>\s*/#include <sys\/types.h>/g' -i sys/sys/types.h
+	sed -e 's/#\s*include\s\+<sys\/kglue\/sys\/time\.h>\s*/#include <sys\/time.h>/g' -i sys/sys/time.h
+	sed -e 's/#\s*include\s\+<sys\/kglue\/sys\/param\.h>\s*/#include <sys\/param.h>/g' -i sys/sys/param.h
+	sed -e 's/#\s*include\s\+<sys\/kglue\/sys\/signal\.h>\s*/#include <sys\/signal.h>/g' -i sys/sys/signal.h
+	sed -e 's/#\s*include\s\+<sys\/kglue\/sys\/queue\.h>\s*/#include <sys\/queue.h>/g' -i sys/sys/queue.h
+	sed -e 's/#\s*include\s\+<sys\/kglue\/netinet\/if_ether\.h>\s*/#include <netinet\/if_ether.h>/g' -i sys/netinet/if_ether.h
 
 	QUILT_PATCHES=$(CURDIR)/debian/patches quilt push -a || test $$? = 2
 

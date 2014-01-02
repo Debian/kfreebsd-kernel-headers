@@ -5,7 +5,7 @@
 
 --- a/sys/amd64/include/param.h
 +++ b/sys/amd64/include/param.h
-@@ -81,6 +81,10 @@
+@@ -85,6 +85,10 @@
   */
  #define	ALIGNED_POINTER(p, t)	1
  
@@ -18,7 +18,7 @@
   * architecture.  It should be used with appropriate caution.
 --- a/sys/i386/include/param.h
 +++ b/sys/i386/include/param.h
-@@ -85,6 +85,10 @@
+@@ -78,6 +78,10 @@
   */
  #define	ALIGNED_POINTER(p, t)	1
  

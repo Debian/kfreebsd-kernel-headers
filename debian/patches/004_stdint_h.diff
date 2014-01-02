@@ -31,17 +31,6 @@
  /*
   * Prototypes and definitions for BSD/OS-compatible network interface
   * media selection.
---- a/sys/dev/usb/usb_endian.h
-+++ b/sys/dev/usb/usb_endian.h
-@@ -27,7 +27,7 @@
- #ifndef _USB_ENDIAN_H_
- #define	_USB_ENDIAN_H_
- 
--#include <sys/stdint.h>
-+#include <stdint.h>
- #include <sys/endian.h>
- 
- /*
 --- a/misc/videodev.h
 +++ b/misc/videodev.h
 @@ -12,6 +12,7 @@
@@ -105,15 +94,15 @@
  #ifdef _KERNEL
 --- a/sys/sys/_mutex.h
 +++ b/sys/sys/_mutex.h
-@@ -31,6 +31,8 @@
- #ifndef _SYS__MUTEX_H_
- #define	_SYS__MUTEX_H_
+@@ -33,6 +33,8 @@
+ 
+ #include <machine/param.h>
  
 +#include <stdint.h>
 +
  /*
   * Sleep/spin mutex.
-  */
+  *
 --- a/sys/sys/bio.h
 +++ b/sys/sys/bio.h
 @@ -39,6 +39,7 @@
@@ -123,7 +112,7 @@
 +#include <stdint.h>
  
  /* bio_cmd */
- #define BIO_READ	0x01
+ #define BIO_READ	0x01	/* Read I/O data */
 --- a/sys/sys/devicestat.h
 +++ b/sys/sys/devicestat.h
 @@ -33,6 +33,7 @@
@@ -160,7 +149,7 @@
  /*
 --- a/sys/sys/pcpu.h
 +++ b/sys/sys/pcpu.h
-@@ -48,6 +48,8 @@
+@@ -52,6 +52,8 @@
  
  #ifdef _KERNEL
  

@@ -3,7 +3,6 @@ sys/cam/*.h                             usr/include/cam
 sys/cam/ata/*.h                         usr/include/cam/ata
 sys/cam/scsi/*.h                        usr/include/cam/scsi
 sys/contrib/altq/altq/*.h		usr/include/altq
-sys/contrib/pf/net/*.h                  usr/include/net
 sys/dev/acpica/*.h                      usr/include/dev/acpica
 sys/dev/an/*.h                          usr/include/dev/an
 sys/dev/bktr/ioctl_bt848.h		usr/include/dev/bktr
@@ -28,17 +27,11 @@ sys/dev/utopia/*.h                      usr/include/dev/utopia
 sys/dev/vkbd/*.h                        usr/include/dev/vkbd
 sys/dev/wi/*.h                          usr/include/dev/wi
 sys/fs/cd9660/*.h                       usr/include/fs/cd9660
-sys/fs/coda/*.h                         usr/include/fs/coda
 sys/fs/devfs/*.h                        usr/include/fs/devfs
 sys/fs/fdescfs/*.h                      usr/include/fs/fdescfs
-sys/fs/fifofs/*.h                       usr/include/fs/fifofs
-sys/fs/hpfs/*.h                         usr/include/fs/hpfs
 sys/fs/msdosfs/*.h                      usr/include/fs/msdosfs
 sys/fs/nfs/*.h				usr/include/fs/nfs
-sys/fs/ntfs/*.h                         usr/include/fs/ntfs
 sys/fs/nullfs/*.h                       usr/include/fs/nullfs
-sys/fs/nwfs/*.h                         usr/include/fs/nwfs
-sys/fs/portalfs/*.h                     usr/include/fs/portalfs
 sys/fs/procfs/*.h                       usr/include/fs/procfs
 sys/fs/pseudofs/*.h                     usr/include/fs/pseudofs
 sys/fs/smbfs/*.h                        usr/include/fs/smbfs
@@ -163,12 +156,12 @@ sys/netipx/spx.h                        usr/include/netipx
 sys/netipx/spx_debug.h                  usr/include/netipx
 sys/netipx/spx_timer.h                  usr/include/netipx
 sys/netipx/spx_var.h                    usr/include/netipx
-sys/netncp/*.h                          usr/include/netncp
 sys/netsmb/*.h				usr/include/netsmb
 sys/nfs/*.h				usr/include/nfs
 sys/nfsserver/*.h			usr/include/nfsserver
 sys/nfsclient/*.h                       usr/include/nfsclient
 sys/opencrypto/*.h                      usr/include/opencrypto
+sys/sys/_bitset.h			usr/include/sys
 sys/sys/_bus_dma.h			usr/include/sys
 sys/sys/_callout.h			usr/include/sys
 sys/sys/_cpuset.h			usr/include/sys
@@ -191,6 +184,7 @@ sys/sys/agpio.h                         usr/include/sys
 sys/sys/assym.h                         usr/include/sys
 sys/sys/ata.h                           usr/include/sys
 sys/sys/bio.h                           usr/include/sys
+sys/sys/bitset.h			usr/include/sys
 sys/sys/bitstring.h                     usr/include/sys
 sys/sys/blist.h                         usr/include/sys
 sys/sys/buf.h                           usr/include/sys
@@ -198,6 +192,7 @@ sys/sys/bufobj.h                        usr/include/sys
 sys/sys/bus.h                           usr/include/sys
 sys/sys/bus_dma.h			usr/include/sys
 sys/sys/callout.h                       usr/include/sys
+sys/sys/caprights.h			usr/include/sys
 sys/sys/cdio.h                          usr/include/sys
 sys/sys/cdrio.h                         usr/include/sys
 sys/sys/chio.h                          usr/include/sys
@@ -209,7 +204,6 @@ sys/sys/copyright.h                     usr/include/sys
 sys/sys/cpuset.h                        usr/include/sys
 sys/sys/ctype.h                         usr/include/sys
 sys/sys/dataacq.h                       usr/include/sys
-sys/sys/device_port.h                   usr/include/sys
 sys/sys/devicestat.h                    usr/include/sys
 sys/sys/disk.h                          usr/include/sys
 sys/sys/disklabel.h                     usr/include/sys

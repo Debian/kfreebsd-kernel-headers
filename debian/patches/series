@@ -2,6 +2,8 @@
 000_v4l.diff
 
 # Patches that are in good shape for merging upstream
+queue_collision.diff
+type_collision.diff
 
 # Other patches that might or might not be mergeable
 000_bruno_haible.diff
@@ -12,7 +14,6 @@
 007_kvm.diff
 008_vm_vm_param_h.diff
 009_inetutils.diff
-010_glibc.diff
 011_wine.diff
 cpufunc.diff
 015_cam.diff
@@ -22,20 +23,9 @@ cpufunc.diff
 024_ioccom.diff
 027_ktrace.diff
 029_conf.diff
-030_pfvar.diff
 031_ufs.diff
 032_vnode.diff
-033_pcpu.diff
-035_devfs_int.diff
-042_syscall_stubs.diff
 ctltype_quad.diff
-endian_collision.diff
-type_collision.diff
-param_collision.diff
-bsd_visible.diff
 050_sigframe.diff
-remove_link_addr_and_link_ntoa.diff
-queue_collision.diff
-sys_socket.diff
 signal_collision.diff
 sys_kern_backward_compat.diff

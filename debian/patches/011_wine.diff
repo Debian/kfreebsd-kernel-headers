@@ -1,131 +1,54 @@
 --- a/sys/sys/elf32.h
 +++ b/sys/sys/elf32.h
-@@ -30,16 +30,19 @@
- #define _SYS_ELF32_H_ 1
+@@ -35,6 +35,7 @@
+ #include <elf.h>
+ #endif
  
- #include <sys/elf_common.h>
-+#include <elf.h>
- 
++#if 0
  /*
   * ELF definitions common to all 32-bit architectures.
   */
- 
-+#if 0
- typedef uint32_t	Elf32_Addr;
- typedef uint16_t	Elf32_Half;
- typedef uint32_t	Elf32_Off;
- typedef int32_t		Elf32_Sword;
- typedef uint32_t	Elf32_Word;
-+#endif
- typedef uint64_t	Elf32_Lword;
- 
- typedef Elf32_Word	Elf32_Hashelt;
-@@ -48,6 +51,7 @@
- typedef Elf32_Word	Elf32_Size;
- typedef Elf32_Sword	Elf32_Ssize;
- 
-+#if 0
- /*
-  * ELF header.
+@@ -150,6 +151,8 @@
   */
-@@ -165,6 +169,8 @@
- #define	ELF32_M_SIZE(info)	((unsigned char)(info))
- #define	ELF32_M_INFO(sym, size)	(((sym)<<8)+(unsigned char)(size))
+ typedef Elf_Note Elf32_Nhdr;
  
 +#endif
 +
  /*
-  *	Hardware/Software capabilities entry
+  *	Move entry
   */
-@@ -176,6 +182,7 @@
- 	} c_un;
- } Elf32_Cap;
+@@ -161,6 +164,7 @@
+ 	Elf32_Half	m_stride;	/* stride info */
+ } Elf32_Move;
  
 +#if 0
  /*
-  * Symbol table entries.
-  */
-@@ -234,12 +241,15 @@
- 	Elf32_Word	vna_name;
- 	Elf32_Word	vna_next;
- } Elf32_Vernaux;
-+#endif
- 
- typedef Elf32_Half Elf32_Versym;
- 
-+#if 0
- typedef struct {
- 	Elf32_Half	si_boundto;	/* direct bindings - symbol bound to */
- 	Elf32_Half	si_flags;	/* per symbol flags */
- } Elf32_Syminfo;
-+#endif
- 
- #endif /* !_SYS_ELF32_H_ */
+  *	The macros compose and decompose values for Move.r_info
+  *
 --- a/sys/sys/elf64.h
 +++ b/sys/sys/elf64.h
-@@ -30,19 +30,24 @@
- #define _SYS_ELF64_H_ 1
- 
- #include <sys/elf_common.h>
-+#include <elf.h>
- 
- /*
-  * ELF definitions common to all 64-bit architectures.
-  */
- 
-+#if 0
- typedef uint64_t	Elf64_Addr;
- typedef uint16_t	Elf64_Half;
- typedef uint64_t	Elf64_Off;
- typedef int32_t		Elf64_Sword;
- typedef int64_t		Elf64_Sxword;
- typedef uint32_t	Elf64_Word;
-+#endif
- typedef uint64_t	Elf64_Lword;
-+#if 0
+@@ -52,6 +52,7 @@
  typedef uint64_t	Elf64_Xword;
-+#endif
+ #endif
  
++#if 0
  /*
   * Types of dynamic symbol hash table bucket and chain elements.
-@@ -57,6 +62,7 @@
- typedef Elf64_Xword	Elf64_Size;
- typedef Elf64_Sxword	Elf64_Ssize;
- 
-+#if 0
- /*
-  * ELF header.
+  *
+@@ -166,6 +167,8 @@
   */
-@@ -172,6 +178,8 @@
- #define	ELF64_M_SIZE(info)	((unsigned char)(info))
- #define	ELF64_M_INFO(sym, size)	(((sym)<<8)+(unsigned char)(size))
+ typedef Elf_Note Elf64_Nhdr;
  
 +#endif
 +
  /*
-  *	Hardware/Software capabilities entry
+  *	Move entry
   */
-@@ -183,6 +191,7 @@
- 	} c_un;
- } Elf64_Cap;
+@@ -183,6 +186,7 @@
+ 
+ #endif
  
 +#if 0
  /*
-  * Symbol table entries.
+  *	Hardware/Software capabilities entry
   */
-@@ -237,12 +246,15 @@
- 	Elf64_Word	vna_name;
- 	Elf64_Word	vna_next;
- } Elf64_Vernaux;
-+#endif
- 
- typedef Elf64_Half Elf64_Versym;
- 
-+#if 0
- typedef struct {
- 	Elf64_Half	si_boundto;	/* direct bindings - symbol bound to */
- 	Elf64_Half	si_flags;	/* per symbol flags */
- } Elf64_Syminfo;
-+#endif
- 
- #endif /* !_SYS_ELF64_H_ */

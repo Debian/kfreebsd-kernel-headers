@@ -29,17 +29,6 @@ See #660396
  #include <machine/cpuregs.h>
  
  /* 
---- a/sys/powerpc/include/cpufunc.h
-+++ b/sys/powerpc/include/cpufunc.h
-@@ -29,6 +29,8 @@
- #ifndef _MACHINE_CPUFUNC_H_
- #define	_MACHINE_CPUFUNC_H_
- 
-+#include <stdint.h>
-+
- /*
-  * Required for user-space atomic.h includes
-  */
 --- a/sys/sparc64/include/cpufunc.h
 +++ b/sys/sparc64/include/cpufunc.h
 @@ -29,6 +29,7 @@

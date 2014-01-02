@@ -27,17 +27,6 @@
  sys/vm/vm_map.h         |    6 ++
  26 files changed, 262 insertions(+), 66 deletions(-)
 
---- a/sys/i386/include/npx.h
-+++ b/sys/i386/include/npx.h
-@@ -41,6 +41,8 @@
- #ifndef _MACHINE_NPX_H_
- #define	_MACHINE_NPX_H_
- 
-+#include <sys/types.h>
-+
- /* Environment information of floating point unit */
- struct env87 {
- 	long	en_cw;		/* control word (16bits) */
 --- a/sys/amd64/include/pcb.h
 +++ b/sys/amd64/include/pcb.h
 @@ -40,6 +40,7 @@
@@ -118,9 +107,9 @@
  /*
   * A Link-Level Sockaddr may specify the interface in one of two
   * ways: either by means of a system-provided index number (computed
-@@ -68,15 +72,9 @@
- 
+@@ -69,15 +73,9 @@
  #define LLADDR(s) ((caddr_t)((s)->sdl_data + (s)->sdl_nlen))
+ #define LLINDEX(s) ((s)->sdl_index)
  
 -#ifndef _KERNEL
 -
@@ -172,82 +161,9 @@
  struct dvd_layer {
  	u_int8_t book_type	:4;
  	u_int8_t book_version	:4;
---- a/sys/sys/extattr.h
-+++ b/sys/sys/extattr.h
-@@ -68,36 +68,36 @@
- 	    struct ucred *cred, struct thread *td, accmode_t accmode);
- 
- #else
--#include <sys/cdefs.h>
-+#include <features.h>
- 
- struct iovec;
- 
- __BEGIN_DECLS
--int	extattrctl(const char *_path, int _cmd, const char *_filename,
--	    int _attrnamespace, const char *_attrname);
--int	extattr_delete_fd(int _fd, int _attrnamespace, const char *_attrname);
--int	extattr_delete_file(const char *_path, int _attrnamespace,
--	    const char *_attrname);
--int	extattr_delete_link(const char *_path, int _attrnamespace,
--	    const char *_attrname);
--ssize_t	extattr_get_fd(int _fd, int _attrnamespace, const char *_attrname,
--	    void *_data, size_t _nbytes);
--ssize_t	extattr_get_file(const char *_path, int _attrnamespace,
--	    const char *_attrname, void *_data, size_t _nbytes);
--ssize_t	extattr_get_link(const char *_path, int _attrnamespace,
--	    const char *_attrname, void *_data, size_t _nbytes);
--ssize_t	extattr_list_fd(int _fd, int _attrnamespace, void *_data,
--	    size_t _nbytes);
--ssize_t	extattr_list_file(const char *_path, int _attrnamespace, void *_data,
--	    size_t _nbytes);
--ssize_t	extattr_list_link(const char *_path, int _attrnamespace, void *_data,
--	    size_t _nbytes);
--int	extattr_set_fd(int _fd, int _attrnamespace, const char *_attrname,
--	    const void *_data, size_t _nbytes);
--int	extattr_set_file(const char *_path, int _attrnamespace,
--	    const char *_attrname, const void *_data, size_t _nbytes);
--int	extattr_set_link(const char *_path, int _attrnamespace,
--	    const char *_attrname, const void *_data, size_t _nbytes);
-+extern int	extattrctl(const char *_path, int _cmd, const char *_filename,
-+	    int _attrnamespace, const char *_attrname) __THROW;
-+extern int	extattr_delete_fd(int _fd, int _attrnamespace, const char *_attrname) __THROW;
-+extern int	extattr_delete_file(const char *_path, int _attrnamespace,
-+	    const char *_attrname) __THROW;
-+extern int	extattr_delete_link(const char *_path, int _attrnamespace,
-+	    const char *_attrname) __THROW;
-+extern ssize_t	extattr_get_fd(int _fd, int _attrnamespace, const char *_attrname,
-+	    void *_data, size_t _nbytes) __THROW;
-+extern ssize_t	extattr_get_file(const char *_path, int _attrnamespace,
-+	    const char *_attrname, void *_data, size_t _nbytes) __THROW;
-+extern ssize_t	extattr_get_link(const char *_path, int _attrnamespace,
-+	    const char *_attrname, void *_data, size_t _nbytes) __THROW;
-+extern ssize_t	extattr_list_fd(int _fd, int _attrnamespace, void *_data,
-+	    size_t _nbytes) __THROW;
-+extern ssize_t	extattr_list_file(const char *_path, int _attrnamespace, void *_data,
-+	    size_t _nbytes) __THROW;
-+extern ssize_t	extattr_list_link(const char *_path, int _attrnamespace, void *_data,
-+	    size_t _nbytes) __THROW;
-+extern int	extattr_set_fd(int _fd, int _attrnamespace, const char *_attrname,
-+	    const void *_data, size_t _nbytes) __THROW;
-+extern int	extattr_set_file(const char *_path, int _attrnamespace,
-+	    const char *_attrname, const void *_data, size_t _nbytes) __THROW;
-+extern int	extattr_set_link(const char *_path, int _attrnamespace,
-+	    const char *_attrname, const void *_data, size_t _nbytes) __THROW;
- __END_DECLS
- 
- #endif /* !_KERNEL */
 --- a/sys/sys/filedesc.h
 +++ b/sys/sys/filedesc.h
-@@ -33,6 +33,7 @@
- #ifndef _SYS_FILEDESC_H_
- #define	_SYS_FILEDESC_H_
- 
-+#include <sys/types.h>
- #include <sys/kglue/sys/queue.h>
- #include <sys/event.h>
- #include <sys/lock.h>
-@@ -45,7 +46,7 @@
+@@ -63,7 +63,7 @@
   * This structure is used for the management of descriptors.  It may be
   * shared by multiple processes.
   */
@@ -255,7 +171,7 @@
 +#define NDSLOTTYPE	unsigned long
  
  struct filedesc {
- 	struct	file **fd_ofiles;	/* file structures for open files */
+ 	struct	filedescent *fd_ofiles;	/* open files */
 --- a/sys/sys/jail.h
 +++ b/sys/sys/jail.h
 @@ -39,6 +39,10 @@
@@ -290,7 +206,7 @@
  
 --- a/sys/sys/linker.h
 +++ b/sys/sys/linker.h
-@@ -189,6 +189,13 @@
+@@ -185,6 +185,13 @@
  /* HWPMC helper */
  void *linker_hwpmc_list_objects(void);
  
@@ -304,7 +220,7 @@
  #endif	/* _KERNEL */
  
  /*
-@@ -336,14 +343,14 @@
+@@ -332,14 +339,14 @@
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -578,7 +494,7 @@
  
  struct thread;
  /*
-@@ -797,9 +896,15 @@
+@@ -692,9 +791,15 @@
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -597,34 +513,9 @@
  __END_DECLS
  #endif	/* _KERNEL */
  
---- a/sys/sys/timepps.h
-+++ b/sys/sys/timepps.h
-@@ -15,6 +15,8 @@
- #ifndef _SYS_TIMEPPS_H_
- #define _SYS_TIMEPPS_H_
- 
-+#include <stddef.h>
-+#include <sys/time.h>
- #include <sys/ioccom.h>
- #include <sys/kglue/sys/time.h>
- 
 --- a/sys/sys/timex.h
 +++ b/sys/sys/timex.h
-@@ -95,11 +95,9 @@
-  */
- #ifndef _SYS_TIMEX_H_
- #define _SYS_TIMEX_H_ 1
--#define NTP_API		4	/* NTP API version */
- 
--#ifndef MSDOS			/* Microsoft specific */
--#include <sys/syscall.h>
--#endif /* MSDOS */
-+#include <features.h>
-+#include <time.h>
- 
- /*
-  * The following defines establish the performance envelope of the
-@@ -176,7 +174,13 @@
+@@ -179,7 +179,13 @@
   * Note: The time member is in microseconds if STA_NANO is zero and
   * nanoseconds if not.
   */
@@ -639,7 +530,7 @@
  	struct timespec time;	/* current time (ns) (ro) */
  	long maxerror;		/* maximum error (us) (ro) */
  	long esterror;		/* estimated error (us) (ro) */
-@@ -225,9 +229,12 @@
+@@ -228,9 +234,12 @@
  #else /* !_KERNEL */
  #include <sys/cdefs.h>
  
@@ -726,7 +617,7 @@
  	(enaddr)[0] = 0x33;						\
  	(enaddr)[1] = 0x33;						\
 @@ -69,6 +67,7 @@
- 	(enaddr)[5] = ((unsigned char *)ip6addr)[15];				\
+ 	(enaddr)[5] = ((const unsigned char *)ip6addr)[15];			\
  }
  
 +__BEGIN_DECLS
@@ -745,9 +636,9 @@
  	unsigned char	arp_tpa[4];	/* target protocol address */
  };
  #define	arp_hrd	ea_hdr.ar_hrd
-@@ -90,9 +89,8 @@
- #define	arp_op	ea_hdr.ar_op
+@@ -91,9 +90,8 @@
  
+ #ifndef BURN_BRIDGES	/* Can be used by third party software. */
  struct sockaddr_inarp {
 -	unsigned char	sin_len;
 -	unsigned char	sin_family;
@@ -757,7 +648,7 @@
  	struct	in_addr sin_addr;
  	struct	in_addr sin_srcaddr;
  	unsigned short	sin_tos;
-@@ -105,9 +103,11 @@
+@@ -108,9 +106,11 @@
  #define	RTF_USETRAILERS	RTF_PROTO1	/* use trailers */
  #define RTF_ANNOUNCE	RTF_PROTO2	/* announce new arp entry */
  
@@ -771,9 +662,9 @@
  
  struct llentry;
  struct ifaddr;
-@@ -118,5 +118,3 @@
- void	arp_ifinit(struct ifnet *, struct ifaddr *);
+@@ -123,5 +123,3 @@
  void	arp_ifinit2(struct ifnet *, struct ifaddr *, unsigned char *);
+ void	arp_ifscrub(struct ifnet *, uint32_t);
  #endif
 -
 -#endif

@@ -21,7 +21,7 @@
  /*
   * Structures defining a network interface, providing a packet
   * transport mechanism (ala level 0 of the PUP protocols).
-@@ -84,7 +87,7 @@
+@@ -85,7 +88,7 @@
  #endif /* _KERNEL */
  #include <sys/lock.h>		/* XXX */
  #include <sys/mutex.h>		/* XXX */
@@ -30,7 +30,7 @@
  #include <sys/sx.h>		/* XXX */
  #include <sys/event.h>		/* XXX */
  #include <sys/_task.h>
-@@ -775,8 +778,19 @@
+@@ -790,8 +793,19 @@
   */
  struct ifaddr {
  	struct	sockaddr *ifa_addr;	/* address of interface */
@@ -77,7 +77,7 @@
   * Overlay for ip header used by other protocols (tcp, udp).
 --- a/sys/netinet6/in6_var.h
 +++ b/sys/netinet6/in6_var.h
-@@ -70,6 +70,9 @@
+@@ -71,6 +71,9 @@
  #include <sys/libkern.h>
  #endif
  

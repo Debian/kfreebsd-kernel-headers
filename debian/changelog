@@ -1,3 +1,13 @@
+kfreebsd-kernel-headers (10.0~1) UNRELEASED; urgency=low
+
+  * New upstream release.
+    - Refresh all patches.
+    - Update install list with new internal dependencies.
+    - Misc adjustments to sed rules to preserve buildability.
+    - Add new tests: assert_wchar_size.c and cpuset.c
+
+ -- Robert Millan <rmh@debian.org>  Thu, 02 Jan 2014 13:50:33 +0100
+
 kfreebsd-kernel-headers (9.2~6) unstable; urgency=low
 
   * Rename MAXLOGNAME to __kernel_MAXLOGNAME to avoid collision with

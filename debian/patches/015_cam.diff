@@ -41,19 +41,6 @@
  
  #ifndef _SUSECONDS_T_DECLARED
  typedef	__suseconds_t	suseconds_t;
-@@ -41,12 +42,4 @@
- #define	_TIME_T_DECLARED
- #endif
- 
--/*
-- * Structure returned by gettimeofday(2) system call, and used in other calls.
-- */
--struct timeval {
--	time_t		tv_sec;		/* seconds */
--	suseconds_t	tv_usec;	/* and microseconds */
--};
--
- #endif /* !_SYS__TIMEVAL_H_ */
 --- a/sys/sys/devicestat.h
 +++ b/sys/sys/devicestat.h
 @@ -33,6 +33,8 @@
@@ -74,5 +61,5 @@
 -#include <sys/_timespec.h>
 +#include <sys/time.h>
  
- #if __BSD_VISIBLE
- #define	TIMEVAL_TO_TIMESPEC(tv, ts)					\
+ #ifndef __FreeBSD__
+ #include <sys/kglue/sys/time.h>
