@@ -1,10 +1,10 @@
-kfreebsd-kernel-headers (10.0~2) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (10.0~2) experimental; urgency=low
 
   * Expose GID_MAX, UID_MAX, UQUAD_MAX, QUAD_MAX and QUAD_MIN.
   * Add <sys/_rmlock.h> (needed by <sys/pcpu.h>).
   * Remove obsolete (and broken) 011_wine.diff.
 
- -- Robert Millan <rmh@debian.org>  Wed, 15 Jan 2014 16:54:58 +0100
+ -- Robert Millan <rmh@debian.org>  Wed, 15 Jan 2014 17:30:03 +0100
 
 kfreebsd-kernel-headers (10.0~1) experimental; urgency=low
 
