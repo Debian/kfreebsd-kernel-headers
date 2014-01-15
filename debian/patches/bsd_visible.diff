@@ -1,0 +1,11 @@
+--- a/sys/sys/limits.h
++++ b/sys/sys/limits.h
+@@ -85,7 +85,7 @@
+ #define	OFF_MIN		__OFF_MIN	/* min value for an off_t */
+ #endif
+ 
+-#if __BSD_VISIBLE
++#if 1
+ #define	GID_MAX		UINT_MAX	/* max value for a gid_t */
+ #define	UID_MAX		UINT_MAX	/* max value for a uid_t */
+ 

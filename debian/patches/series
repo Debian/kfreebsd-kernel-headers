@@ -1,11 +1,12 @@
-# Patches from (or merged in) upstream
-000_v4l.diff
+# Patches merged in kfreebsd-11 package (userland.diff)
 
 # Patches that are in good shape for merging upstream
+bsd_visible.diff
 queue_collision.diff
 type_collision.diff
 
 # Other patches that might or might not be mergeable
+000_v4l.diff
 000_bruno_haible.diff
 002_gdb.diff
 004_stdint_h.diff
