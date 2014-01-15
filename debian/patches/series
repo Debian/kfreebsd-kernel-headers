@@ -15,7 +15,6 @@ type_collision.diff
 007_kvm.diff
 008_vm_vm_param_h.diff
 009_inetutils.diff
-011_wine.diff
 cpufunc.diff
 015_cam.diff
 019_exec_pagesize.diff
