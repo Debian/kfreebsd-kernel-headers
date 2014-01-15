@@ -1,6 +1,7 @@
 kfreebsd-kernel-headers (10.0~2) UNRELEASED; urgency=low
 
   * Expose GID_MAX, UID_MAX, UQUAD_MAX, QUAD_MAX and QUAD_MIN.
+  * Add <sys/_rmlock.h> (needed by <sys/pcpu.h>).
 
  -- Robert Millan <rmh@debian.org>  Wed, 15 Jan 2014 16:54:58 +0100
 

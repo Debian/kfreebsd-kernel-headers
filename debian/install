@@ -170,6 +170,7 @@ sys/sys/_lock.h                         usr/include/sys
 sys/sys/_lockmgr.h                      usr/include/sys
 sys/sys/_mutex.h                        usr/include/sys
 sys/sys/_null.h                         usr/include/sys
+sys/sys/_rmlock.h			usr/include/sys
 sys/sys/_rwlock.h                       usr/include/sys
 sys/sys/_semaphore.h                    usr/include/sys
 sys/sys/_sigset.h			usr/include/sys
