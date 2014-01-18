@@ -1,6 +1,14 @@
 --- a/sys/sys/limits.h
 +++ b/sys/sys/limits.h
-@@ -85,7 +85,7 @@
+@@ -78,14 +78,14 @@
+ #endif
+ #endif /* 0 */
+ 
+-#if __POSIX_VISIBLE >= 200112 || __XSI_VISIBLE
++#if 1
+ #define	SIZE_T_MAX	__SIZE_T_MAX	/* max value for a size_t */
+ 
+ #define	OFF_MAX		__OFF_MAX	/* max value for an off_t */
  #define	OFF_MIN		__OFF_MIN	/* min value for an off_t */
  #endif
  

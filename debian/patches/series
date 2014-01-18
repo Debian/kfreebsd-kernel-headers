@@ -1,7 +1,7 @@
 # Patches merged in kfreebsd-11 package (userland.diff)
+merged.diff
 
 # Patches that are in good shape for merging upstream
-bsd_visible.diff
 queue_collision.diff
 type_collision.diff
 

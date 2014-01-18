@@ -19,6 +19,7 @@ TESTS = \
 	devicestat.o \
 	in_pcb.o \
 	ino_t.o \
+	limits.o \
 	ppp.o \
 	sctp.o \
 	soundcard.o \
