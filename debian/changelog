@@ -4,6 +4,8 @@ kfreebsd-kernel-headers (10.0~3) UNRELEASED; urgency=low
   * Enable FreeBSD-style net80211 ioctls.
   * Add <net/if_pfsync.h>, <net/pfvar.h>, <net/pf_mtag.h>,
     <sys/capability.h>, <sys/procctl.h>.
+  * Remove <sys/sdt.h>. When adding it back, it should be in a separate
+    package. (Closes: #726248)
 
  -- Robert Millan <rmh@debian.org>  Sat, 18 Jan 2014 16:37:25 +0100
 
