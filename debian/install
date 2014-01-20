@@ -211,6 +211,7 @@ sys/sys/ctype.h                         usr/include/sys
 sys/sys/dataacq.h                       usr/include/sys
 sys/sys/devicestat.h                    usr/include/sys
 sys/sys/disk.h                          usr/include/sys
+sys/sys/diskmbr.h			usr/include/sys
 sys/sys/disklabel.h                     usr/include/sys
 sys/sys/dkstat.h                        usr/include/sys
 sys/sys/domain.h                        usr/include/sys

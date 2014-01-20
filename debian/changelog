@@ -6,6 +6,7 @@ kfreebsd-kernel-headers (10.0~3) UNRELEASED; urgency=low
     <sys/capability.h>, <sys/procctl.h>.
   * Remove <sys/sdt.h>. When adding it back, it should be in a separate
     package. (Closes: #726248)
+  * Add <sys/diskmbr.h>.
 
  -- Robert Millan <rmh@debian.org>  Sat, 18 Jan 2014 16:37:25 +0100
 
