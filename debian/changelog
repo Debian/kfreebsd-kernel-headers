@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (10.0~3) UNRELEASED; urgency=low
+kfreebsd-kernel-headers (10.0~3) experimental; urgency=low
 
   * Expose SIZE_T_MAX, OFF_MAX and OFF_MIN. Add limits.c test to verify.
   * Enable FreeBSD-style net80211 ioctls.
@@ -9,7 +9,7 @@ kfreebsd-kernel-headers (10.0~3) UNRELEASED; urgency=low
   * Add <sys/diskmbr.h>.
   * Add <sys/sf_buf.h>.
 
- -- Robert Millan <rmh@debian.org>  Sat, 18 Jan 2014 16:37:25 +0100
+ -- Robert Millan <rmh@debian.org>  Mon, 20 Jan 2014 23:44:42 +0100
 
 kfreebsd-kernel-headers (10.0~2) experimental; urgency=low
 
