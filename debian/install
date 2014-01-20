@@ -294,6 +294,7 @@ sys/sys/runq.h                          usr/include/sys
 # See #726248
 #sys/sys/sdt.h                           usr/include/sys
 sys/sys/selinfo.h                       usr/include/sys
+sys/sys/sf_buf.h			usr/include/sys
 sys/sys/sigio.h                         usr/include/sys
 sys/sys/signal.h			usr/include/sys/kglue/sys
 sys/sys/signalvar.h                     usr/include/sys
