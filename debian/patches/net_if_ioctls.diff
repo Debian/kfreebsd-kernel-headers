@@ -1,6 +1,13 @@
 --- a/sys/net/if.h
 +++ b/sys/net/if.h
-@@ -35,6 +35,15 @@
+@@ -30,11 +30,20 @@
+  * $FreeBSD$
+  */
+ 
+-#ifndef _NET_IF_H_
+-#define	_NET_IF_H_
++#ifndef _FREEBSD_NET_IF_H_
++#define	_FREEBSD_NET_IF_H_
  
  #include <sys/cdefs.h>
  
@@ -16,7 +23,15 @@
  #ifdef _KERNEL
  #include <sys/kglue/sys/queue.h>
  #endif
-@@ -410,6 +419,8 @@
+@@ -62,7 +71,6 @@
+ #define		IFNAMSIZ	IF_NAMESIZE
+ #define		IF_MAXUNIT	0x7fff	/* historical value */
+ #endif
+-#if __BSD_VISIBLE
+ 
+ /*
+  * Structure used to query names of interface cloners.
+@@ -410,6 +418,8 @@
  	 (sizeof(struct ifreq) - sizeof(struct sockaddr) + \
  	  (ifr).ifr_addr.sa_len) : sizeof(struct ifreq))
  
@@ -25,7 +40,7 @@
  struct ifaliasreq {
  	char	ifra_name[IFNAMSIZ];		/* if name, e.g. "en0" */
  	struct	sockaddr ifra_addr;
-@@ -443,6 +454,8 @@
+@@ -443,6 +453,8 @@
  	void            *ifd_data;
  };
  
@@ -34,7 +49,16 @@
  /* 
   * Structure used to retrieve aux status data from interfaces.
   * Kernel suppliers to this interface should respect the formatting
-@@ -543,4 +556,6 @@
+@@ -515,8 +527,6 @@
+ 	struct	sockaddr_storage dstaddr; /* out */
+ };
+ 
+-#endif /* __BSD_VISIBLE */
+-
+ #ifdef _KERNEL
+ #ifdef MALLOC_DECLARE
+ MALLOC_DECLARE(M_IFADDR);
+@@ -543,4 +553,6 @@
  #include <net/if_var.h>
  #endif
  
