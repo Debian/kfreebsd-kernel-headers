@@ -1,3 +1,11 @@
+kfreebsd-kernel-headers (10.0~4) UNRELEASED; urgency=low
+
+  * Add <net/if.h>, providing only struct ifaliasreq, struct
+    oifaliasreq, struct ifmediareq and struct ifdrv. Add a test for
+    collisions with GNU <net/if.h>.
+
+ -- Robert Millan <rmh@debian.org>  Mon, 03 Feb 2014 18:57:12 +0100
+
 kfreebsd-kernel-headers (10.0~3) experimental; urgency=low
 
   * Expose SIZE_T_MAX, OFF_MAX and OFF_MIN. Add limits.c test to verify.

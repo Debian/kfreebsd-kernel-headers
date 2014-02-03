@@ -20,6 +20,7 @@ TESTS = \
 	in_pcb.o \
 	ino_t.o \
 	limits.o \
+	net_if.o \
 	ppp.o \
 	sctp.o \
 	soundcard.o \

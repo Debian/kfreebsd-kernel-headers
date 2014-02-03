@@ -29,3 +29,4 @@ ctltype_quad.diff
 050_sigframe.diff
 signal_collision.diff
 sys_kern_backward_compat.diff
+net_if_ioctls.diff

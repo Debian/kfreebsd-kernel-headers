@@ -61,6 +61,7 @@ sys/geom/virstor/*.h                    usr/include/geom/virstor
 sys/net/bpf.h                           usr/include/net
 sys/net/bpfdesc.h                       usr/include/net
 sys/net/bridgestp.h                     usr/include/net
+sys/net/if.h				usr/include/sys/kglue/net
 sys/net/if_arc.h                        usr/include/net
 sys/net/if_arp.h                        usr/include/net
 sys/net/if_atm.h                        usr/include/net

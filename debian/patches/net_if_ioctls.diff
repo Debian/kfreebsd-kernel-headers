@@ -1,0 +1,43 @@
+--- a/sys/net/if.h
++++ b/sys/net/if.h
+@@ -35,6 +35,15 @@
+ 
+ #include <sys/cdefs.h>
+ 
++/* Disable everything except for:
++struct ifaliasreq {
++struct oifaliasreq {
++struct ifmediareq {
++struct  ifdrv {
++*/
++
++#if 0
++
+ #ifdef _KERNEL
+ #include <sys/kglue/sys/queue.h>
+ #endif
+@@ -410,6 +419,8 @@
+ 	 (sizeof(struct ifreq) - sizeof(struct sockaddr) + \
+ 	  (ifr).ifr_addr.sa_len) : sizeof(struct ifreq))
+ 
++#endif /* 0 */
++
+ struct ifaliasreq {
+ 	char	ifra_name[IFNAMSIZ];		/* if name, e.g. "en0" */
+ 	struct	sockaddr ifra_addr;
+@@ -443,6 +454,8 @@
+ 	void            *ifd_data;
+ };
+ 
++#if 0
++
+ /* 
+  * Structure used to retrieve aux status data from interfaces.
+  * Kernel suppliers to this interface should respect the formatting
+@@ -543,4 +556,6 @@
+ #include <net/if_var.h>
+ #endif
+ 
++#endif /* 0 */
++
+ #endif /* !_NET_IF_H_ */
