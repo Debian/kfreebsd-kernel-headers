@@ -5,6 +5,7 @@ Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
 Uploaders: Aurelien Jarno <aurel32@debian.org>,
  Robert Millan <rmh@debian.org>
 Build-Depends: debhelper (>= 7), quilt, kfreebsd-source-10.0,
+ libc0.1-dev (>= 2.18-2~),
 Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/kfreebsd-kernel-headers/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/kfreebsd-kernel-headers/
 Standards-Version: 3.9.4
