@@ -1,0 +1,12 @@
+Index: kfreebsd-kernel-headers/sys/sys/bus_dma.h
+===================================================================
+--- kfreebsd-kernel-headers.orig/sys/sys/bus_dma.h
++++ kfreebsd-kernel-headers/sys/sys/bus_dma.h
+@@ -111,6 +111,7 @@ struct mbuf;
+ struct memdesc;
+ struct pmap;
+ struct uio;
++struct vm_page;
+ 
+ /*
+  * Operations performed by bus_dmamap_sync().
