@@ -30,3 +30,4 @@ ctltype_quad.diff
 signal_collision.diff
 sys_kern_backward_compat.diff
 net_if_ioctls.diff
+vmpage_h_include
