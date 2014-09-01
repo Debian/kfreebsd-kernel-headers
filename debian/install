@@ -88,7 +88,9 @@ sys/net/netisr_internal.h		usr/include/net
 sys/net/ppp_defs.h			usr/include/net
 sys/net/pfkeyv2.h                       usr/include/net
 sys/net/pfvar.h				usr/include/net
+sys/netpfil/pf/pf_altq.h		usr/include/netpfil/pf
 sys/netpfil/pf/pf_mtag.h		usr/include/netpfil/pf
+sys/netpfil/pf/pf.h			usr/include/netpfil/pf
 sys/net/radix.h                         usr/include/net
 sys/net/raw_cb.h                        usr/include/net
 sys/net/route.h                         usr/include/net
@@ -206,6 +208,7 @@ sys/sys/condvar.h                       usr/include/sys
 sys/sys/conf.h                          usr/include/sys
 sys/sys/cons.h                          usr/include/sys
 sys/sys/consio.h                        usr/include/sys
+sys/sys/counter.h			usr/include/sys
 sys/sys/copyright.h                     usr/include/sys
 sys/sys/cpuset.h                        usr/include/sys
 sys/sys/ctype.h                         usr/include/sys
