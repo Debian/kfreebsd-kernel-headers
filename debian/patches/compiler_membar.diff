@@ -1,0 +1,41 @@
+Compiler memory barriers, specific to gcc and clang
+
+Defined in FreeBSD sys/cdefs.h but not glibc's
+
+--- a/sys/amd64/include/atomic.h
++++ b/sys/amd64/include/atomic.h
+@@ -32,6 +32,10 @@
+ #error this file needs sys/cdefs.h as a prerequisite
+ #endif
+ 
++#if defined(__GNUC__) && !defined(__compiler_membar)
++#define __compiler_membar()     __asm __volatile(" " : : : "memory")
++#endif
++
+ #define	mb()	__asm __volatile("mfence;" : : : "memory")
+ #define	wmb()	__asm __volatile("sfence;" : : : "memory")
+ #define	rmb()	__asm __volatile("lfence;" : : : "memory")
+--- a/sys/i386/include/atomic.h
++++ b/sys/i386/include/atomic.h
+@@ -37,6 +37,10 @@
+ #include <machine/specialreg.h>
+ #endif
+ 
++#if defined(__GNUC__) && !defined(__compiler_membar)
++#define __compiler_membar()     __asm __volatile(" " : : : "memory")
++#endif
++
+ #define	mb()	__asm __volatile("lock; addl $0,(%%esp)" : : : "memory", "cc")
+ #define	wmb()	__asm __volatile("lock; addl $0,(%%esp)" : : : "memory", "cc")
+ #define	rmb()	__asm __volatile("lock; addl $0,(%%esp)" : : : "memory", "cc")
+--- a/sys/x86/include/bus.h
++++ b/sys/x86/include/bus.h
+@@ -1037,7 +1037,7 @@
+ 		__asm __volatile("lock; addl $0,0(%%esp)" : : : "memory");
+ #endif
+ 	else
+-		__compiler_membar();
++		__asm __volatile(" " : : : "memory");
+ #endif
+ }
+ 

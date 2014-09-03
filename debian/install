@@ -73,6 +73,7 @@ sys/net/if_lagg.h			usr/include/net
 sys/net/if_llc.h                        usr/include/net
 sys/net/if_media.h                      usr/include/net
 sys/net/if_mib.h                        usr/include/net
+sys/net/if_pflog.h			usr/include/net
 sys/net/if_pfsync.h			usr/include/net
 sys/net/if_sppp.h                       usr/include/net
 sys/net/if_stf.h                        usr/include/net

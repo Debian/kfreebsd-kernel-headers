@@ -1,6 +1,7 @@
 TESTS = \
 	assert_correct_bsize.o \
 	assert_wchar_size.o \
+	atomic.o \
 	endian_collision.o \
 	socket_collision.o \
 	signal_collision.o \
@@ -38,7 +39,7 @@ TESTS = \
 CFLAGS = -I. -I../debian/kfreebsd-kernel-headers/usr/include
 
 # Enable all the stuff in glibc to probe for collisions
-CFLAGS += -D_GNU_SOURCE -Werror -Wsystem-headers
+CFLAGS += -D_GNU_SOURCE -Werror -Wsystem-headers -Wimplicit-function-declaration
 
 all: $(TESTS)
 

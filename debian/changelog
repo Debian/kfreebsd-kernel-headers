@@ -1,9 +1,18 @@
 kfreebsd-kernel-headers (10.1~2) UNRELEASED; urgency=medium
 
-  * NOT RELEASED YET
-  * Add more pf headers
+  [ Christoph Egger ]
+  * Add more pf headers:
+    - netpfil/pf/pf_altq.h
+    - netpfil/pf/pf.h
 
- -- Christoph Egger <christoph@debian.org>  Sun, 31 Aug 2014 12:18:07 -0700
+  [ Steven Chamberlain ]
+  * Add to machine/atomic.h a definition for macro __compiler_membar
+    not available in glibc (Closes: #750836)
+  * Add net/if_pflog.h (Closes: #756553)
+    - add atomic.c testcase (Romain Francoise)
+  * Enable testing for -Wimplicit-function-declaration
+
+ -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Wed, 03 Sep 2014 13:06:24 +0100
 
 kfreebsd-kernel-headers (10.1~1) experimental; urgency=medium
 
