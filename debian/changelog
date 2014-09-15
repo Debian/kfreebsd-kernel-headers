@@ -12,6 +12,11 @@ kfreebsd-kernel-headers (10.1~2) UNRELEASED; urgency=medium
   * Add net/if_pflog.h (Closes: #756553)
     - add atomic.c testcase (Romain Francoise)
   * Enable testing for -Wimplicit-function-declaration
+  * Refresh patches against kfreebsd-source-10.1 10.1~svn271306-1:
+    - 000_bruno_haible.diff
+    - 005_register_t.diff
+    - 009_inetutils.diff
+    - net_if_ioctls.diff
 
  -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Wed, 03 Sep 2014 13:06:24 +0100
 

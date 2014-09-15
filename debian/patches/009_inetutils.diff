@@ -1,8 +1,8 @@
 --- a/sys/net/route.h
 +++ b/sys/net/route.h
-@@ -33,6 +33,8 @@
- #ifndef _NET_ROUTE_H_
- #define _NET_ROUTE_H_
+@@ -35,6 +35,8 @@
+ 
+ #include <sys/counter.h>
  
 +#include <sys/socket.h>
 +

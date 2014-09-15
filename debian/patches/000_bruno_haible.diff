@@ -494,7 +494,7 @@
  
  struct thread;
  /*
-@@ -692,9 +791,15 @@
+@@ -728,9 +827,15 @@
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -586,7 +586,7 @@
 --- a/sys/netinet/if_ether.h
 +++ b/sys/netinet/if_ether.h
 @@ -30,11 +30,9 @@
-  * $FreeBSD$
+  * $FreeBSD: stable/10/sys/netinet/if_ether.h 249925 2013-04-26 12:50:32Z glebius $
   */
  
 -#ifndef _NETINET_IF_ETHER_H_
