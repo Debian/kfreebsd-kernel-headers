@@ -4,6 +4,7 @@ kfreebsd-kernel-headers (10.1~2) UNRELEASED; urgency=medium
   * Add more pf headers:
     - netpfil/pf/pf_altq.h
     - netpfil/pf/pf.h
+  * Add sys/counter.h
 
   [ Steven Chamberlain ]
   * Add to machine/atomic.h a definition for macro __compiler_membar
