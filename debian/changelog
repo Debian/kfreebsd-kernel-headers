@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (10.1~2) UNRELEASED; urgency=medium
+kfreebsd-kernel-headers (10.1~2) experimental; urgency=medium
 
   [ Christoph Egger ]
   * Add more pf headers:
@@ -19,7 +19,7 @@ kfreebsd-kernel-headers (10.1~2) UNRELEASED; urgency=medium
     - net_if_ioctls.diff
   * Add sys/net/flowtable.h
 
- -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Wed, 03 Sep 2014 13:06:24 +0100
+ -- Christoph Egger <christoph@debian.org>  Tue, 16 Sep 2014 20:40:37 -0700
 
 kfreebsd-kernel-headers (10.1~1) experimental; urgency=medium
 
