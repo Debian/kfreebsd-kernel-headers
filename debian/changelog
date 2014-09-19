@@ -1,3 +1,12 @@
+kfreebsd-kernel-headers (10.1~3) UNRELEASED; urgency=medium
+
+  [ Steven Chamberlain ]
+  * 000_bruno_haible.diff: update sys/timex.h diff from upstream:
+    - define ntptimeval as ntptimeval4 (Closes: #756786)
+    - add missing extern declarations for ntp_adjtime, ntp_gettime
+
+ -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Sat, 20 Sep 2014 00:22:24 +0100
+
 kfreebsd-kernel-headers (10.1~2) experimental; urgency=medium
 
   [ Christoph Egger ]
