@@ -32,6 +32,7 @@ TESTS = \
 	sys_vnode.o \
 	stdarg.o \
 	usb.o \
+	vnode.o \
 	$()
 
 #	elf.o
