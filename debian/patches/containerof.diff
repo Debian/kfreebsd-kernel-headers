@@ -1,0 +1,20 @@
+From: Steven Chamberlain <steven@pyro.eu.org>
+Subject: fix regression affecting libgtop2
+Forwarded: not-needed
+
+Undo a change to this file made in r240539;  return to using
+member2struct (available in sys/param.h) instead of the newer
+__containerof interface (which is not available in GNU libc
+sys/cdefs.h).
+
+--- a/sys/fs/devfs/devfs_int.h
++++ b/sys/fs/devfs/devfs_int.h
+@@ -69,7 +69,7 @@
+ 	LIST_HEAD(, cdev_privdata) cdp_fdpriv;
+ };
+ 
+-#define	cdev2priv(c)	__containerof(c, struct cdev_priv, cdp_c)
++#define	cdev2priv(c)	member2struct(cdev_priv, cdp_c, c)
+ 
+ struct cdev	*devfs_alloc(int);
+ int	devfs_dev_exists(const char *);

@@ -10,6 +10,8 @@ kfreebsd-kernel-headers (10.1~3) UNRELEASED; urgency=medium
     Most consumers are able to use both.
   * Add sys/_pctrie.h, needed for sys/vnode.h with _KVM_VNODE
     - add testcase vnode.c for this
+  * containerof.diff: work around a regression affecting libgtop2, 
+    revert to using member2struct instead of __containerof 
 
  -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Sat, 20 Sep 2014 00:22:24 +0100
 
