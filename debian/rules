@@ -45,6 +45,7 @@ build-arch-stamp:
 	set -e ; \
 	find sys -type f | (while read i ; do \
 	sed -i $$i \
+		-e 's/__FreeBSD_version/__FreeBSD_kernel_version/g' \
 		\
 		-e 's/defined\s*(\s*__GNUCLIKE_[A-Z_]\+\s*)/defined(__GNUC__)/g' \
 		-e 's/#\s*ifdef\s*__GNUCLIKE_[A-Z_]\+\(\s\|$$\)/#if defined(__GNUC__)/g' \
