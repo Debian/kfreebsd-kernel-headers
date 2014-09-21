@@ -4,14 +4,14 @@ kfreebsd-kernel-headers (10.1~3) UNRELEASED; urgency=medium
   * 000_bruno_haible.diff: update sys/timex.h diff from upstream:
     - define ntptimeval as ntptimeval4 (Closes: #756786)
     - add missing extern declarations for ntp_adjtime, ntp_gettime
-  * Replace __FreeBSD_version with __FreeBSD_kernel_version.  Fixes a
-    regression introduced by 10.0~1, first seen in libgtop2 2.28.5-2,
-    which assumes the latter to be defined when __FreeBSD_kernel__ is.
-    Most consumers are able to use both.
-  * Add sys/_pctrie.h, needed for sys/vnode.h with _KVM_VNODE
-    - add testcase vnode.c for this
-  * containerof.diff: work around a regression affecting libgtop2, 
-    revert to using member2struct instead of __containerof 
+  * Fix regressions that made libgtop2 FTBFS: (Closes: #762372)
+    - Replace __FreeBSD_version with __FreeBSD_kernel_version, as was
+      the case before 10.0~1.
+    - Add sys/_pctrie.h, needed for sys/vnode.h if _KVM_VNODE is
+      defined;  add a testcase vnode.c for this
+    - New patch containerof.diff:  revert to using member2struct instead
+      of __containerof in sys/fs/devfs/devfs_int.h, since the latter not
+      unavailable in GNU libc sys/cdefs.h
 
  -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Sat, 20 Sep 2014 00:22:24 +0100
 
