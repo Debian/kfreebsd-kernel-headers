@@ -49,7 +49,7 @@
  /*
   * Address Resolution Protocol.
   *
-@@ -75,6 +80,15 @@
+@@ -75,6 +80,15 @@ struct	arphdr {
  
  #define ar_sha(ap)	(((caddr_t)((ap)+1)) +   0)
  #define ar_spa(ap)	(((caddr_t)((ap)+1)) +   (ap)->ar_hln)
@@ -78,7 +78,7 @@
  /*
   * A Link-Level Sockaddr may specify the interface in one of two
   * ways: either by means of a system-provided index number (computed
-@@ -69,15 +73,9 @@
+@@ -69,15 +73,9 @@ struct sockaddr_dl {
  #define LLADDR(s) ((caddr_t)((s)->sdl_data + (s)->sdl_nlen))
  #define LLINDEX(s) ((s)->sdl_index)
  
@@ -134,7 +134,7 @@
  	u_int8_t book_version	:4;
 --- a/sys/sys/filedesc.h
 +++ b/sys/sys/filedesc.h
-@@ -63,7 +63,7 @@
+@@ -63,7 +63,7 @@ struct filedescent {
   * This structure is used for the management of descriptors.  It may be
   * shared by multiple processes.
   */
@@ -145,7 +145,7 @@
  	struct	filedescent *fd_ofiles;	/* open files */
 --- a/sys/sys/jail.h
 +++ b/sys/sys/jail.h
-@@ -39,6 +39,10 @@
+@@ -39,6 +39,10 @@ struct jail_v0 {
  };
  #endif
  
@@ -156,7 +156,7 @@
  struct jail {
  	uint32_t	version;
  	char		*path;
-@@ -108,11 +112,13 @@
+@@ -108,11 +112,13 @@ struct xprison {
  
  struct iovec;
  
@@ -177,7 +177,7 @@
  
 --- a/sys/sys/linker.h
 +++ b/sys/sys/linker.h
-@@ -185,6 +185,13 @@
+@@ -185,6 +185,13 @@ int linker_search_symbol_name(caddr_t va
  /* HWPMC helper */
  void *linker_hwpmc_list_objects(void);
  
@@ -191,7 +191,7 @@
  #endif	/* _KERNEL */
  
  /*
-@@ -332,14 +339,14 @@
+@@ -332,14 +339,14 @@ struct kld_sym_lookup {
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -248,7 +248,7 @@
  #define PCI_MAXNAMELEN	16
 --- a/sys/sys/procfs.h
 +++ b/sys/sys/procfs.h
-@@ -89,4 +89,8 @@
+@@ -89,4 +89,8 @@ typedef struct thrmisc {
  
  typedef uint64_t psaddr_t;	/* An address in the target process. */
  
@@ -289,7 +289,7 @@
  /*
   * Scheduling class information.
   */
-@@ -79,14 +82,15 @@
+@@ -79,14 +82,15 @@ struct thread;
  int	rtp_to_pri(struct rtprio *, struct thread *);
  void	pri_to_rtp(struct thread *, struct rtprio *);
  #endif
@@ -320,7 +320,7 @@
  /*
   * Logical process signal actions and state, needed only within the process
   * The mapping between sigacts and proc structures is 1:1 except for rfork()
-@@ -93,6 +96,7 @@
+@@ -93,6 +96,7 @@ struct osigaction {
  typedef void __osiginfohandler_t(int, osiginfo_t *, void *);
  #endif /* COMPAT_43 */
  
@@ -328,7 +328,7 @@
  /* additional signal action values, used only temporarily/internally */
  #define	SIG_CATCH	((__sighandler_t *)2)
  /* #define SIG_HOLD        ((__sighandler_t *)3) See signal.h */
-@@ -181,7 +185,7 @@
+@@ -181,7 +185,7 @@ __sigisempty(sigset_t *set)
  	int i;
  
  	for (i = 0; i < _SIG_WORDS; i++) {
@@ -337,7 +337,7 @@
  			return (0);
  	}
  	return (1);
-@@ -193,7 +197,7 @@
+@@ -193,7 +197,7 @@ __sigseteq(sigset_t *set1, sigset_t *set
  	int i;
  
  	for (i = 0; i < _SIG_WORDS; i++) {
@@ -346,7 +346,7 @@
  			return (0);
  	}
  	return (1);
-@@ -208,6 +212,8 @@
+@@ -208,6 +212,8 @@ struct osigevent {
  	union sigval sigev_value;	/* Signal value */
  };
  
@@ -465,7 +465,7 @@
  
  struct thread;
  /*
-@@ -728,9 +827,15 @@
+@@ -728,9 +827,15 @@ struct sbuf *sbuf_new_for_sysctl(struct
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -486,35 +486,25 @@
  
 --- a/sys/sys/timex.h
 +++ b/sys/sys/timex.h
-@@ -179,7 +179,14 @@
-  * Note: The time member is in microseconds if STA_NANO is zero and
-  * nanoseconds if not.
-  */
--struct ntptimeval {
-+struct ntptimeval3 {
-+	struct timespec time;	/* current time (ns) (ro) */
-+	long maxerror;		/* maximum error (us) (ro) */
-+	long esterror;		/* estimated error (us) (ro) */
-+	int time_state;		/* time status */
-+};
-+#define ntptimeval	ntptimeval4
-+struct ntptimeval4 {
- 	struct timespec time;	/* current time (ns) (ro) */
- 	long maxerror;		/* maximum error (us) (ro) */
- 	long esterror;		/* estimated error (us) (ro) */
-@@ -234,6 +241,13 @@
- __END_DECLS
- #endif /* _KERNEL */
+@@ -221,19 +221,4 @@ struct timex {
+ 	long	stbcnt;		/* stability limit exceeded (ro) */
+ };
  
-+#else /* !__FreeBSD__ */
-+
-+__BEGIN_DECLS
-+extern int	ntp_adjtime(struct timex *) __THROW;
-+extern int	ntp_gettime(struct ntptimeval *) __THROW;
-+__END_DECLS
-+
- #endif /* __FreeBSD__ */
- 
+-#ifdef __FreeBSD__
+-
+-#ifdef _KERNEL
+-void	ntp_update_second(int64_t *adjustment, time_t *newsec);
+-#else /* !_KERNEL */
+-#include <sys/cdefs.h>
+-
+-__BEGIN_DECLS
+-int	ntp_adjtime(struct timex *);
+-int	ntp_gettime(struct ntptimeval *);
+-__END_DECLS
+-#endif /* _KERNEL */
+-
+-#endif /* __FreeBSD__ */
+-
  #endif /* !_SYS_TIMEX_H_ */
 --- a/sys/sys/ucred.h
 +++ b/sys/sys/ucred.h
@@ -557,7 +547,7 @@
 --- a/sys/netinet/if_ether.h
 +++ b/sys/netinet/if_ether.h
 @@ -30,11 +30,9 @@
-  * $FreeBSD: stable/10/sys/netinet/if_ether.h 249925 2013-04-26 12:50:32Z glebius $
+  * $FreeBSD$
   */
  
 -#ifndef _NETINET_IF_ETHER_H_
@@ -607,7 +597,7 @@
  	unsigned char	arp_tpa[4];	/* target protocol address */
  };
  #define	arp_hrd	ea_hdr.ar_hrd
-@@ -91,9 +90,8 @@
+@@ -91,9 +90,8 @@ struct	ether_arp {
  
  #ifndef BURN_BRIDGES	/* Can be used by third party software. */
  struct sockaddr_inarp {
@@ -619,7 +609,7 @@
  	struct	in_addr sin_addr;
  	struct	in_addr sin_srcaddr;
  	unsigned short	sin_tos;
-@@ -108,9 +106,11 @@
+@@ -108,9 +106,11 @@ struct sockaddr_inarp {
  #define	RTF_USETRAILERS	RTF_PROTO1	/* use trailers */
  #define RTF_ANNOUNCE	RTF_PROTO2	/* announce new arp entry */
  
@@ -633,7 +623,7 @@
  
  struct llentry;
  struct ifaddr;
-@@ -123,5 +123,3 @@
+@@ -123,5 +123,3 @@ void	arp_ifinit(struct ifnet *, struct i
  void	arp_ifinit2(struct ifnet *, struct ifaddr *, unsigned char *);
  void	arp_ifscrub(struct ifnet *, uint32_t);
  #endif

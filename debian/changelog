@@ -1,9 +1,11 @@
 kfreebsd-kernel-headers (10.1~3) UNRELEASED; urgency=medium
 
+  [ Petr Salinger ]
+  * 000_bruno_haible.diff: update of sys/timex.h:
+    - do not try to support 14 years old NTP_API 3 (Closes: #756786)
+    - do not expose declarations for ntp_adjtime, ntp_gettime at all,
+      our libc does not implement them
   [ Steven Chamberlain ]
-  * 000_bruno_haible.diff: update sys/timex.h diff from upstream:
-    - define ntptimeval as ntptimeval4 (Closes: #756786)
-    - add missing extern declarations for ntp_adjtime, ntp_gettime
   * Fix regressions that made libgtop2 FTBFS: (Closes: #762372)
     - Replace __FreeBSD_version with __FreeBSD_kernel_version, as was
       the case before 10.0~1.
