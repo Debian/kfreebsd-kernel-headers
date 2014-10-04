@@ -1,11 +1,19 @@
-kfreebsd-kernel-headers (10.1~3) UNRELEASED; urgency=medium
+kfreebsd-kernel-headers (10.1~4) UNRELEASED; urgency=medium
 
   [ Petr Salinger ]
   * 000_bruno_haible.diff: update of sys/timex.h:
-    - do not try to support 14 years old NTP_API 3 (Closes: #756786)
+    - do not try to support 14 years old NTP_API 3
     - do not expose declarations for ntp_adjtime, ntp_gettime at all,
       our libc does not implement them
+
+ -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Sat, 04 Oct 2014 17:22:24 +0100
+
+kfreebsd-kernel-headers (10.1~3) experimental; urgency=medium
+
   [ Steven Chamberlain ]
+  * 000_bruno_haible.diff: update sys/timex.h diff from upstream:
+    - define ntptimeval as ntptimeval4 (Closes: #756786)
+    - add missing extern declarations for ntp_adjtime, ntp_gettime
   * Fix regressions that made libgtop2 FTBFS: (Closes: #762372)
     - Replace __FreeBSD_version with __FreeBSD_kernel_version, as was
       the case before 10.0~1.
@@ -15,7 +23,7 @@ kfreebsd-kernel-headers (10.1~3) UNRELEASED; urgency=medium
       of __containerof in sys/fs/devfs/devfs_int.h, since the latter not
       unavailable in GNU libc sys/cdefs.h
 
- -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Sat, 20 Sep 2014 00:22:24 +0100
+ -- Christoph Egger <christoph@debian.org>  Sun, 21 Sep 2014 16:25:26 -0700
 
 kfreebsd-kernel-headers (10.1~2) experimental; urgency=medium
 
