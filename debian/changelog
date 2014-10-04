@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (10.1~4) UNRELEASED; urgency=medium
+kfreebsd-kernel-headers (10.1~4) unstable; urgency=low
 
   [ Petr Salinger ]
   * 000_bruno_haible.diff: update of sys/timex.h:
@@ -6,7 +6,13 @@ kfreebsd-kernel-headers (10.1~4) UNRELEASED; urgency=medium
     - do not expose declarations for ntp_adjtime, ntp_gettime at all,
       our libc does not implement them
 
- -- GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>  Sat, 04 Oct 2014 17:22:24 +0100
+  [ Steven Chamberlain ]
+  * Add myself to Uploaders
+
+  [ Christoph Egger ]
+  * Upload to unstable
+
+ -- Petr Salinger <Petr.Salinger@seznam.cz>  Sat,  4 Oct 2014 17:49:36 +0200
 
 kfreebsd-kernel-headers (10.1~3) experimental; urgency=medium
 

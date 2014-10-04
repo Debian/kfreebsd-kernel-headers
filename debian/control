@@ -2,9 +2,11 @@ Source: kfreebsd-kernel-headers
 Section: kernel
 Priority: standard
 Maintainer: GNU/kFreeBSD Maintainers <debian-bsd@lists.debian.org>
-Uploaders: Aurelien Jarno <aurel32@debian.org>,
+Uploaders:
+ Aurelien Jarno <aurel32@debian.org>,
  Robert Millan <rmh@debian.org>,
- Christoph Egger <christoph@debian.org>
+ Christoph Egger <christoph@debian.org>,
+ Steven Chamberlain <steven@pyro.eu.org>,
 Build-Depends: debhelper (>= 7), quilt, kfreebsd-source-10.1,
  libc0.1-dev (>= 2.18-2~),
 Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/kfreebsd-kernel-headers/
