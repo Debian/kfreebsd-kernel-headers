@@ -1,7 +1,7 @@
 --- a/sys/net/if.h
 +++ b/sys/net/if.h
 @@ -30,11 +30,20 @@
-  * $FreeBSD: stable/10/sys/net/if.h 264076 2014-04-03 14:58:52Z glebius $
+  * $FreeBSD$
   */
  
 -#ifndef _NET_IF_H_

@@ -8,6 +8,7 @@ kfreebsd-kernel-headers (10.1~4) unstable; urgency=low
 
   [ Steven Chamberlain ]
   * Add myself to Uploaders
+  * Refresh patch net_if_ioctls.diff
 
   [ Christoph Egger ]
   * Upload to unstable
