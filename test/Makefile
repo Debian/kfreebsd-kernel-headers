@@ -22,6 +22,7 @@ TESTS = \
 	ino_t.o \
 	limits.o \
 	net_if.o \
+	net_route.o \
 	ppp.o \
 	sctp.o \
 	soundcard.o \

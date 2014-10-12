@@ -1,0 +1,10 @@
+--- a/sys/sys/counter.h
++++ b/sys/sys/counter.h
+@@ -29,6 +29,7 @@
+ #ifndef __SYS_COUNTER_H__
+ #define __SYS_COUNTER_H__
+ 
++#include <sys/kglue/sys/types.h>	/* for uint64_t */
+ typedef uint64_t *counter_u64_t;
+ 
+ #ifdef _KERNEL

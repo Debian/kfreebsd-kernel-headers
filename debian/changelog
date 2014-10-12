@@ -1,3 +1,11 @@
+kfreebsd-kernel-headers (10.1~5) UNRELEASED; urgency=medium
+
+  * Make net/route.h compilable again in userland, by including
+    necessary kernel types in sys/counter.h (Closes: #764897)
+    - add net_route.c testcase
+
+ -- Steven Chamberlain <steven@pyro.eu.org>  Sun, 12 Oct 2014 01:33:11 +0100
+
 kfreebsd-kernel-headers (10.1~4) unstable; urgency=low
 
   [ Petr Salinger ]

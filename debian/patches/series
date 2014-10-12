@@ -33,3 +33,4 @@ net_if_ioctls.diff
 vmpage_h_include
 compiler_membar.diff
 containerof.diff
+sys_counter.diff
