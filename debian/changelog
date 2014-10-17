@@ -3,6 +3,8 @@ kfreebsd-kernel-headers (10.1~5) UNRELEASED; urgency=medium
   * Make net/route.h compilable again in userland, by including
     necessary kernel types in sys/counter.h (Closes: #764897)
     - add net_route.c testcase
+  * Add sys/seq.h (sequence counters), needed by sys/filedesc.h
+    - Raise Build-Depends: kfreebsd-source-10.1 (>> 10.1~svn273199~)
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sun, 12 Oct 2014 01:33:11 +0100
 

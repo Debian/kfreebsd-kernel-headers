@@ -300,6 +300,7 @@ sys/sys/rtprio.h                        usr/include/sys
 sys/sys/runq.h                          usr/include/sys
 # See #726248
 #sys/sys/sdt.h                           usr/include/sys
+sys/sys/seq.h                           usr/include/sys
 sys/sys/selinfo.h                       usr/include/sys
 sys/sys/sf_buf.h			usr/include/sys
 sys/sys/sigio.h                         usr/include/sys
