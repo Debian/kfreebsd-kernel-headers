@@ -1,2 +1,3 @@
-usr/include/opencrypto			usr/include/crypto
-usr/include/fs/cd9660			usr/include/isofs/cd9660
+#! /usr/bin/dh-exec
+usr/include/opencrypto			usr/include/${DEB_HOST_MULTIARCH}/crypto
+usr/include/fs/cd9660			usr/include/${DEB_HOST_MULTIARCH}/isofs/cd9660

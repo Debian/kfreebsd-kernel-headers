@@ -103,7 +103,7 @@ build: build-indep build-arch
 
 .PHONY: build-indep build-arch build
 
-install-indep: build-indep
+-indep: build-indep
 
 install-arch: build-arch
 	dh_testdir
@@ -114,18 +114,18 @@ install-arch: build-arch
 	dh_link
 
 ifneq ($(filter amd64, $(kfreebsd_cpu)),)
-	sh debian/generate-asm.sh $(kfreebsd_cpu) $(CURDIR)/sys $(HEADERS_PACKAGE)/usr/include
+	sh debian/generate-asm.sh $(kfreebsd_cpu) $(CURDIR)/sys $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)
 else
-	mkdir -p $(HEADERS_PACKAGE)/usr/include/machine
+	mkdir -p $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/machine
 	cd $(CURDIR)/sys/$(kfreebsd_cpu)/include \
-		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/machine \;
+		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/machine \;
 endif
 
 ifneq ($(filter i386 amd64, $(kfreebsd_cpu)),)
 	# Install "x86" directory (only on i386 and amd64).
-	mkdir -p $(HEADERS_PACKAGE)/usr/include/x86
+	mkdir -p $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/x86
 	cd $(CURDIR)/sys/x86/include \
-		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/x86 \;
+		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/x86 \;
 endif
 
 	# headers must be tested after they're installed

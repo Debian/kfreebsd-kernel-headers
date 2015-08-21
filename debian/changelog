@@ -1,8 +1,7 @@
 kfreebsd-kernel-headers (10.1~6) UNRELEASED; urgency=medium
 
-  * Declare conflict against Linux libcap-dev, possible within a multi-
-    arch environment:
-    - sys/capability.h
+  * Use multiarch triplet for install paths.
+  * Raise debhelper compat level to 9
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Thu, 20 Aug 2015 23:45:34 +0100
 
