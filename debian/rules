@@ -128,8 +128,10 @@ ifneq ($(filter i386 amd64, $(kfreebsd_cpu)),)
 		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/x86 \;
 endif
 
+ifeq (,$(filter $(DEB_BUILD_OPTIONS),nocheck))
 	# headers must be tested after they're installed
 	$(MAKE) -C test
+endif
 
 install: install-indep install-arch
 
