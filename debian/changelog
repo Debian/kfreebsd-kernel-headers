@@ -1,7 +1,7 @@
 kfreebsd-kernel-headers (10.1~6) UNRELEASED; urgency=medium
 
   * Use multiarch triplet for install paths.
-  * Raise debhelper compat level to 9
+  * Raise debhelper dependency version and compat level to 9.
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Thu, 20 Aug 2015 23:45:34 +0100
 
