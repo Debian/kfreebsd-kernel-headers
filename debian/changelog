@@ -1,4 +1,4 @@
-kfreebsd-kernel-headers (10.1~6) UNRELEASED; urgency=medium
+kfreebsd-kernel-headers (10.1~6) experimental; urgency=medium
 
   * Use multiarch triplet for install paths.
   * Raise debhelper dependency version and compat level to 9.
