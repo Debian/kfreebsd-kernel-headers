@@ -3,6 +3,8 @@ kfreebsd-kernel-headers (10.1~7) UNRELEASED; urgency=medium
   * Limit libc0.1-dev dependency to !nocheck profile.  (Thanks, Helmut
     Grohne).  (Closes: #796903)
   * Note new dependency on dh-exec.
+  * Install compatibility symlinks on kfreebsd-amd64 for -m32 multilib.
+    (Closes: #797324)
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Tue, 25 Aug 2015 17:12:43 +0100
 

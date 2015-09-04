@@ -128,6 +128,14 @@ ifneq ($(filter i386 amd64, $(kfreebsd_cpu)),)
 		&& find . -type f -name "*.h" -exec cp --parents {} $(HEADERS_PACKAGE)/usr/include/$(DEB_HOST_MULTIARCH)/x86 \;
 endif
 
+ifneq ($(filter amd64, $(kfreebsd_cpu)),)
+	# Install compatibility symlinks for -m32 multilib (only on amd64).
+	mkdir -p $(HEADERS_PACKAGE)/usr/include/i386-kfreebsd-gnu
+	for i in x86 machine machine-i386 sys vm osreldate.h; do \
+		ln -sf /usr/include/$(DEB_HOST_MULTIARCH)/$$i $(HEADERS_PACKAGE)/usr/include/i386-kfreebsd-gnu/ ; \
+	done
+endif
+
 ifeq (,$(filter $(DEB_BUILD_OPTIONS),nocheck))
 	# headers must be tested after they're installed
 	$(MAKE) -C test
