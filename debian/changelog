@@ -6,6 +6,7 @@ kfreebsd-kernel-headers (10.1~7) UNRELEASED; urgency=medium
     dpkg-dev for Build-Profiles.
   * Install compatibility symlinks on kfreebsd-amd64 for -m32 multilib.
     (Closes: #797324)
+  * Bump Standards-Version to 3.9.6;  no change needed.
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Tue, 25 Aug 2015 17:12:43 +0100
 
