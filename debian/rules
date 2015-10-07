@@ -103,7 +103,7 @@ build: build-indep build-arch
 
 .PHONY: build-indep build-arch build
 
--indep: build-indep
+install-indep: build-indep
 
 install-arch: build-arch
 	dh_testdir
@@ -136,7 +136,7 @@ ifneq ($(filter amd64, $(kfreebsd_cpu)),)
 	done
 endif
 
-ifeq (,$(filter $(DEB_BUILD_OPTIONS),nocheck))
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
 	# headers must be tested after they're installed
 	$(MAKE) -C test
 endif
