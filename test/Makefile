@@ -1,3 +1,5 @@
+DEB_HOST_MULTIARCH := $(shell dpkg-architecture -qDEB_HOST_MULTIARCH)
+
 TESTS = \
 	assert_correct_bsize.o \
 	assert_wchar_size.o \
@@ -38,7 +40,7 @@ TESTS = \
 
 #	elf.o
 
-CFLAGS = -I. -I../debian/kfreebsd-kernel-headers/usr/include
+CFLAGS = -I. -I../debian/kfreebsd-kernel-headers/usr/include/$(DEB_HOST_MULTIARCH)
 
 # Enable all the stuff in glibc to probe for collisions
 CFLAGS += -D_GNU_SOURCE -Werror -Wsystem-headers -Wimplicit-function-declaration
