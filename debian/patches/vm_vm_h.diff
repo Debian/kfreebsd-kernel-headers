@@ -1,0 +1,11 @@
+--- a/sys/vm/vm.h
++++ b/sys/vm/vm.h
+@@ -64,6 +64,8 @@
+ #include <machine/vm.h>
+ 
+ #include <sys/_types.h>
++/* for vm_offset_t, vm_ooffset_t */
++#include <sys/kglue/sys/types.h>
+ 
+ typedef char vm_inherit_t;	/* inheritance codes */
+ 

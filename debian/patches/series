@@ -34,3 +34,4 @@ vmpage_h_include
 compiler_membar.diff
 containerof.diff
 sys_counter.diff
+vm_vm_h.diff

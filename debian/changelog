@@ -3,6 +3,7 @@ kfreebsd-kernel-headers (10.1~8) UNRELEASED; urgency=medium
   * Fix typos in debian/rules introduced since 10.1~5.
     (Thanks, Helmut Grohne).
   * Fix test/Makefile to look in multiarch include dirs
+  * Add new test for vm/vm.h
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Tue, 06 Oct 2015 17:25:46 +0100
 
