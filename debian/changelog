@@ -4,6 +4,7 @@ kfreebsd-kernel-headers (10.1~8) UNRELEASED; urgency=medium
     (Thanks, Helmut Grohne).
   * Fix test/Makefile to look in multiarch include dirs
   * Add new test for vm/vm.h
+  * Include kernel types to make vm/vm.h usable (Closes: #807611)
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Tue, 06 Oct 2015 17:25:46 +0100
 

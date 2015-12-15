@@ -35,6 +35,7 @@ TESTS = \
 	sys_vnode.o \
 	stdarg.o \
 	usb.o \
+	vm.o \
 	vnode.o \
 	$()
 
