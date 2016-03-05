@@ -11,11 +11,7 @@ full_version	:= $(shell dpkg-parsechangelog | grep ^Version: | sed -e 's/^.*: //
 version		:= $(shell echo $(full_version) | sed -e 's/[~+-].*//g')
 major           := $(shell echo $(version) | sed -e 's/\..*//g')
 
-ifeq ($(DEB_HOST_ARCH_CPU), mipsel)
-kfreebsd_cpu	:= mips
-else
 kfreebsd_cpu	:= $(DEB_HOST_ARCH_CPU)
-endif
 
 HEADERS_PACKAGE	:= $(CURDIR)/debian/kfreebsd-kernel-headers
 SRC_TAR		:= /usr/src/kfreebsd-source-$(version).tar.xz
