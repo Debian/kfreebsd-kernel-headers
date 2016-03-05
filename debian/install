@@ -145,7 +145,6 @@ sys/netinet/tcp_timer.h                 usr/include/${DEB_HOST_MULTIARCH}/netine
 sys/netinet/tcp_var.h                   usr/include/${DEB_HOST_MULTIARCH}/netinet
 sys/netinet/tcpip.h                     usr/include/${DEB_HOST_MULTIARCH}/netinet
 sys/netinet/udp_var.h                   usr/include/${DEB_HOST_MULTIARCH}/netinet
-sys/netinet6/in6_gif.h                  usr/include/${DEB_HOST_MULTIARCH}/netinet6
 sys/netinet6/in6_pcb.h                  usr/include/${DEB_HOST_MULTIARCH}/netinet6
 sys/netinet6/in6_var.h                  usr/include/${DEB_HOST_MULTIARCH}/netinet6
 sys/netinet6/ip6_mroute.h               usr/include/${DEB_HOST_MULTIARCH}/netinet6
