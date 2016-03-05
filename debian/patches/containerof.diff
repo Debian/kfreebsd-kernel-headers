@@ -9,7 +9,7 @@ sys/cdefs.h).
 
 --- a/sys/fs/devfs/devfs_int.h
 +++ b/sys/fs/devfs/devfs_int.h
-@@ -69,7 +69,7 @@
+@@ -70,7 +70,7 @@
  	LIST_HEAD(, cdev_privdata) cdp_fdpriv;
  };
  

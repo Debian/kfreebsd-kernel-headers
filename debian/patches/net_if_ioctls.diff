@@ -49,16 +49,16 @@
  /* 
   * Structure used to retrieve aux status data from interfaces.
   * Kernel suppliers to this interface should respect the formatting
-@@ -521,8 +533,6 @@
- 	struct	sockaddr_storage dstaddr; /* out */
- };
+@@ -534,8 +546,6 @@
+ 	uint8_t data[8];	/* read buffer */
+ }; 
  
 -#endif /* __BSD_VISIBLE */
 -
  #ifdef _KERNEL
  #ifdef MALLOC_DECLARE
  MALLOC_DECLARE(M_IFADDR);
-@@ -549,4 +559,6 @@
+@@ -562,4 +572,6 @@
  #include <net/if_var.h>
  #endif
  

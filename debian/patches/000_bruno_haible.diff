@@ -49,7 +49,7 @@
  /*
   * Address Resolution Protocol.
   *
-@@ -75,6 +80,15 @@ struct	arphdr {
+@@ -75,6 +80,15 @@
  
  #define ar_sha(ap)	(((caddr_t)((ap)+1)) +   0)
  #define ar_spa(ap)	(((caddr_t)((ap)+1)) +   (ap)->ar_hln)
@@ -78,7 +78,7 @@
  /*
   * A Link-Level Sockaddr may specify the interface in one of two
   * ways: either by means of a system-provided index number (computed
-@@ -69,15 +73,9 @@ struct sockaddr_dl {
+@@ -69,15 +73,9 @@
  #define LLADDR(s) ((caddr_t)((s)->sdl_data + (s)->sdl_nlen))
  #define LLINDEX(s) ((s)->sdl_index)
  
@@ -134,7 +134,7 @@
  	u_int8_t book_version	:4;
 --- a/sys/sys/filedesc.h
 +++ b/sys/sys/filedesc.h
-@@ -63,7 +63,7 @@ struct filedescent {
+@@ -66,7 +66,7 @@
   * This structure is used for the management of descriptors.  It may be
   * shared by multiple processes.
   */
@@ -145,7 +145,7 @@
  	struct	filedescent *fd_ofiles;	/* open files */
 --- a/sys/sys/jail.h
 +++ b/sys/sys/jail.h
-@@ -39,6 +39,10 @@ struct jail_v0 {
+@@ -39,6 +39,10 @@
  };
  #endif
  
@@ -156,7 +156,7 @@
  struct jail {
  	uint32_t	version;
  	char		*path;
-@@ -108,11 +112,13 @@ struct xprison {
+@@ -108,11 +112,13 @@
  
  struct iovec;
  
@@ -177,7 +177,7 @@
  
 --- a/sys/sys/linker.h
 +++ b/sys/sys/linker.h
-@@ -185,6 +185,13 @@ int linker_search_symbol_name(caddr_t va
+@@ -185,6 +185,13 @@
  /* HWPMC helper */
  void *linker_hwpmc_list_objects(void);
  
@@ -191,7 +191,7 @@
  #endif	/* _KERNEL */
  
  /*
-@@ -332,14 +339,14 @@ struct kld_sym_lookup {
+@@ -332,14 +339,14 @@
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -248,9 +248,9 @@
  #define PCI_MAXNAMELEN	16
 --- a/sys/sys/procfs.h
 +++ b/sys/sys/procfs.h
-@@ -89,4 +89,8 @@ typedef struct thrmisc {
- 
- typedef uint64_t psaddr_t;	/* An address in the target process. */
+@@ -112,4 +112,8 @@
+ };
+ #endif /* __HAVE_REG32 */
  
 +/* We don't have any differences between processes and threads,
 +   therefore have only one PID type.  */
@@ -289,7 +289,7 @@
  /*
   * Scheduling class information.
   */
-@@ -79,14 +82,15 @@ struct thread;
+@@ -79,14 +82,15 @@
  int	rtp_to_pri(struct rtprio *, struct thread *);
  void	pri_to_rtp(struct thread *, struct rtprio *);
  #endif
@@ -320,7 +320,7 @@
  /*
   * Logical process signal actions and state, needed only within the process
   * The mapping between sigacts and proc structures is 1:1 except for rfork()
-@@ -93,6 +96,7 @@ struct osigaction {
+@@ -93,6 +96,7 @@
  typedef void __osiginfohandler_t(int, osiginfo_t *, void *);
  #endif /* COMPAT_43 */
  
@@ -328,7 +328,7 @@
  /* additional signal action values, used only temporarily/internally */
  #define	SIG_CATCH	((__sighandler_t *)2)
  /* #define SIG_HOLD        ((__sighandler_t *)3) See signal.h */
-@@ -181,7 +185,7 @@ __sigisempty(sigset_t *set)
+@@ -181,7 +185,7 @@
  	int i;
  
  	for (i = 0; i < _SIG_WORDS; i++) {
@@ -337,7 +337,7 @@
  			return (0);
  	}
  	return (1);
-@@ -193,7 +197,7 @@ __sigseteq(sigset_t *set1, sigset_t *set
+@@ -193,7 +197,7 @@
  	int i;
  
  	for (i = 0; i < _SIG_WORDS; i++) {
@@ -346,7 +346,7 @@
  			return (0);
  	}
  	return (1);
-@@ -208,6 +212,8 @@ struct osigevent {
+@@ -208,6 +212,8 @@
  	union sigval sigev_value;	/* Signal value */
  };
  
@@ -465,7 +465,7 @@
  
  struct thread;
  /*
-@@ -728,9 +827,15 @@ struct sbuf *sbuf_new_for_sysctl(struct
+@@ -801,9 +900,15 @@
  #include <sys/cdefs.h>
  
  __BEGIN_DECLS
@@ -486,7 +486,7 @@
  
 --- a/sys/sys/timex.h
 +++ b/sys/sys/timex.h
-@@ -221,19 +221,4 @@ struct timex {
+@@ -221,19 +221,4 @@
  	long	stbcnt;		/* stability limit exceeded (ro) */
  };
  
@@ -597,7 +597,7 @@
  	unsigned char	arp_tpa[4];	/* target protocol address */
  };
  #define	arp_hrd	ea_hdr.ar_hrd
-@@ -91,9 +90,8 @@ struct	ether_arp {
+@@ -91,9 +90,8 @@
  
  #ifndef BURN_BRIDGES	/* Can be used by third party software. */
  struct sockaddr_inarp {
@@ -609,7 +609,7 @@
  	struct	in_addr sin_addr;
  	struct	in_addr sin_srcaddr;
  	unsigned short	sin_tos;
-@@ -108,9 +106,11 @@ struct sockaddr_inarp {
+@@ -108,9 +106,11 @@
  #define	RTF_USETRAILERS	RTF_PROTO1	/* use trailers */
  #define RTF_ANNOUNCE	RTF_PROTO2	/* announce new arp entry */
  
@@ -623,7 +623,7 @@
  
  struct llentry;
  struct ifaddr;
-@@ -123,5 +123,3 @@ void	arp_ifinit(struct ifnet *, struct i
+@@ -123,5 +123,3 @@
  void	arp_ifinit2(struct ifnet *, struct ifaddr *, unsigned char *);
  void	arp_ifscrub(struct ifnet *, uint32_t);
  #endif

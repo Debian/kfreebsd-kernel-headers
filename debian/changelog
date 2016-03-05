@@ -1,6 +1,13 @@
 kfreebsd-kernel-headers (10.3~1) UNRELEASED; urgency=medium
 
   * New upstream version
+  * Refresh patches:
+    - queue_collision.diff
+    - 000_bruno_haible.diff
+    - 009_inetutils.diff
+    - net_if_ioctls.diff
+    - compiler_membar.diff
+    - containerof.diff
   * Remove obsolete sys/netinet/in_gif.h
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 05 Mar 2016 03:06:35 +0000

@@ -1,7 +1,7 @@
 --- a/sys/sys/queue.h
 +++ b/sys/sys/queue.h
-@@ -257,8 +257,10 @@
- 	struct type **stqh_last;/* addr of last next element */		\
+@@ -284,8 +284,10 @@
+ 	class type **stqh_last;	/* addr of last next element */		\
  }
  
 +#if defined(__FreeBSD__) || defined(_KERNEL)
@@ -11,7 +11,7 @@
  
  #define	STAILQ_ENTRY(type)						\
  struct {								\
-@@ -533,8 +535,10 @@
+@@ -587,8 +589,10 @@
  }
  #endif
  

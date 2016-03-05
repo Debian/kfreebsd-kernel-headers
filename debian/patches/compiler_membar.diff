@@ -30,7 +30,7 @@ Defined in FreeBSD sys/cdefs.h but not glibc's
  #define	rmb()	__asm __volatile("lock; addl $0,(%%esp)" : : : "memory", "cc")
 --- a/sys/x86/include/bus.h
 +++ b/sys/x86/include/bus.h
-@@ -1037,7 +1037,7 @@
+@@ -1020,7 +1020,7 @@
  		__asm __volatile("lock; addl $0,0(%%esp)" : : : "memory");
  #endif
  	else
