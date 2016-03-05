@@ -12,7 +12,7 @@ Build-Depends:
  dpkg-dev (>= 1.17.14~),
  dh-exec,
  quilt,
- kfreebsd-source-10.1 (>> 10.1~svn273304~),
+ kfreebsd-source-10.3,
  libc0.1-dev (>= 2.18-2~) <!nocheck>,
 Vcs-Browser: http://anonscm.debian.org/viewvc/glibc-bsd/trunk/kfreebsd-kernel-headers/
 Vcs-Svn: svn://anonscm.debian.org/glibc-bsd/trunk/kfreebsd-kernel-headers/
