@@ -126,7 +126,6 @@ sys/netinet/icmp_var.h                  usr/include/${DEB_HOST_MULTIARCH}/netine
 sys/netinet/if_atm.h                    usr/include/${DEB_HOST_MULTIARCH}/netinet
 sys/netinet/if_ether.h			usr/include/${DEB_HOST_MULTIARCH}/sys/kglue/netinet
 sys/netinet/igmp_var.h                  usr/include/${DEB_HOST_MULTIARCH}/netinet
-sys/netinet/in_gif.h                    usr/include/${DEB_HOST_MULTIARCH}/netinet
 sys/netinet/in_pcb.h                    usr/include/${DEB_HOST_MULTIARCH}/netinet
 sys/netinet/in_var.h                    usr/include/${DEB_HOST_MULTIARCH}/netinet
 sys/netinet/ip_carp.h                   usr/include/${DEB_HOST_MULTIARCH}/netinet
