@@ -63,6 +63,7 @@ sys/net/bpf.h                           usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/bpfdesc.h                       usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/bridgestp.h                     usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/flowtable.h			usr/include/${DEB_HOST_MULTIARCH}/net
+sys/net/ieee8023ad_lacp.h		usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/if.h				usr/include/${DEB_HOST_MULTIARCH}/sys/kglue/net
 sys/net/if_arc.h                        usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/if_arp.h                        usr/include/${DEB_HOST_MULTIARCH}/net
@@ -85,12 +86,15 @@ sys/net/if_tun.h                        usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/if_types.h                      usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/if_var.h                        usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/if_vlan_var.h                   usr/include/${DEB_HOST_MULTIARCH}/net
+sys/net/if_vxlan.h                      usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/iso88025.h                      usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/netisr.h                        usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/netisr_internal.h		usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/ppp_defs.h			usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/pfkeyv2.h                       usr/include/${DEB_HOST_MULTIARCH}/net
 sys/net/pfvar.h				usr/include/${DEB_HOST_MULTIARCH}/net
+sys/net/sff8436.h                       usr/include/${DEB_HOST_MULTIARCH}/net
+sys/net/sff8472.h                       usr/include/${DEB_HOST_MULTIARCH}/net
 sys/netpfil/pf/pf_altq.h		usr/include/${DEB_HOST_MULTIARCH}/netpfil/pf
 sys/netpfil/pf/pf_mtag.h		usr/include/${DEB_HOST_MULTIARCH}/netpfil/pf
 sys/netpfil/pf/pf.h			usr/include/${DEB_HOST_MULTIARCH}/netpfil/pf
