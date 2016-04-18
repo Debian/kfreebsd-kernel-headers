@@ -226,6 +226,7 @@ sys/sys/disklabel.h                     usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/dkstat.h                        usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/domain.h                        usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/dvdio.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
+sys/sys/efi.h				usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/elf.h				usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/elf32.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/elf64.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
