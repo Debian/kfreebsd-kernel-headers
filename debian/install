@@ -333,6 +333,7 @@ sys/sys/types.h				usr/include/${DEB_HOST_MULTIARCH}/sys/kglue/sys
 sys/sys/ucred.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/unpcb.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/user.h                          usr/include/${DEB_HOST_MULTIARCH}/sys
+sys/sys/uuid.h				usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/vmmeter.h                       usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/vnode.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/ufs/ffs/*.h                         usr/include/${DEB_HOST_MULTIARCH}/ufs/ffs
