@@ -331,6 +331,7 @@ sys/sys/ttyqueue.h                      usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/time.h				usr/include/${DEB_HOST_MULTIARCH}/sys/kglue/sys
 sys/sys/types.h				usr/include/${DEB_HOST_MULTIARCH}/sys/kglue/sys
 sys/sys/ucred.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
+sys/sys/umtx.h				usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/unpcb.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/user.h                          usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/uuid.h				usr/include/${DEB_HOST_MULTIARCH}/sys
