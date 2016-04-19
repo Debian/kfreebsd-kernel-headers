@@ -192,6 +192,7 @@ sys/sys/_task.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_termios.h			usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_timeval.h                      usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_types.h                        usr/include/${DEB_HOST_MULTIARCH}/sys
+sys/sys/_umtx.h				usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/acct.h                          usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/agpio.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/assym.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
