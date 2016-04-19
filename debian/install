@@ -190,6 +190,7 @@ sys/sys/_sx.h                           usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_stdint.h			usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_task.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_termios.h			usr/include/${DEB_HOST_MULTIARCH}/sys
+sys/sys/_timespec.h			usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_timeval.h                      usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_types.h                        usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/_umtx.h				usr/include/${DEB_HOST_MULTIARCH}/sys
