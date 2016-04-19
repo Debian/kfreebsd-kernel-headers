@@ -209,6 +209,7 @@ sys/sys/bus_dma.h			usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/callout.h                       usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/capability.h			usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/caprights.h			usr/include/${DEB_HOST_MULTIARCH}/sys
+sys/sys/capsicum.h			usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/cdio.h                          usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/cdrio.h                         usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/chio.h                          usr/include/${DEB_HOST_MULTIARCH}/sys

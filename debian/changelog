@@ -3,7 +3,8 @@ kfreebsd-kernel-headers (10.3~2) UNRELEASED; urgency=medium
   * Add sys/net/ieee8023ad_lacp.h, if_vxlan.h, sff8436.h, sff8472.h;
     needed by ifconfig
   * Add sys/sys/efi.h, uuid.h; needed by sysctl
-  * Add sys/sys/_timespec.h, _umtx.h, umtx.h; needed by kdump
+  * Add sys/sys/_timespec.h, _umtx.h, capsicum.h, umtx.h;
+    needed by kdump
 
  -- Steven Chamberlain <steven@pyro.eu.org>  Mon, 04 Apr 2016 12:56:44 +0100
 
