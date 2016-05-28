@@ -1,3 +1,9 @@
+kfreebsd-kernel-headers (10.3~3) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- Steven Chamberlain <steven@pyro.eu.org>  Sat, 28 May 2016 11:25:40 +0100
+
 kfreebsd-kernel-headers (10.3~2) experimental; urgency=medium
 
   * Add sys/net/ieee8023ad_lacp.h, if_vxlan.h, sff8436.h, sff8472.h;
