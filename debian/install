@@ -299,7 +299,6 @@ sys/sys/protosw.h                       usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/ptio.h                          usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/queue.h				usr/include/${DEB_HOST_MULTIARCH}/sys/kglue/sys
 sys/sys/rangelock.h			usr/include/${DEB_HOST_MULTIARCH}/sys
-sys/sys/random.h                        usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/refcount.h                      usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/resourcevar.h                   usr/include/${DEB_HOST_MULTIARCH}/sys
 sys/sys/rman.h                          usr/include/${DEB_HOST_MULTIARCH}/sys
