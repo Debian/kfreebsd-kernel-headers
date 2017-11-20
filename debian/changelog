@@ -1,10 +1,10 @@
-kfreebsd-kernel-headers (10.3~4) UNRELEASED; urgency=medium
+kfreebsd-kernel-headers (10.3~4) unstable; urgency=medium
 
   * Do not install <sys/random.h>. This conflicts with the glibc one and
     doesn't provide anything useful to userland (everything is protected
     with #ifdef _KERNEL #endif).
 
- -- Aurelien Jarno <aurel32@debian.org>  Sun, 19 Nov 2017 22:31:14 +0100
+ -- Aurelien Jarno <aurel32@debian.org>  Mon, 20 Nov 2017 17:26:26 +0100
 
 kfreebsd-kernel-headers (10.3~3) unstable; urgency=medium
 
