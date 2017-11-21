@@ -1,10 +1,10 @@
-kfreebsd-kernel-headers (10.3~6) UNRELEASED; urgency=medium
+kfreebsd-kernel-headers (10.3~6) unstable; urgency=medium
 
   * Fix crypto and isofs/cd9660 symlinks.
   * Install a 32-bit symlink for the bsm/ directory. 
   * Use relative symlinks. 
 
- -- Aurelien Jarno <aurel32@debian.org>  Tue, 21 Nov 2017 11:07:44 +0100
+ -- Aurelien Jarno <aurel32@debian.org>  Tue, 21 Nov 2017 14:31:53 +0100
 
 kfreebsd-kernel-headers (10.3~4) unstable; urgency=medium
 
