@@ -128,7 +128,7 @@ ifneq ($(filter amd64, $(kfreebsd_cpu)),)
 	# Install compatibility symlinks for -m32 multilib (only on amd64).
 	mkdir -p $(HEADERS_PACKAGE)/usr/include/i386-kfreebsd-gnu
 	for i in x86 bsm machine machine-i386 sys vm osreldate.h; do \
-		ln -sf /usr/include/$(DEB_HOST_MULTIARCH)/$$i $(HEADERS_PACKAGE)/usr/include/i386-kfreebsd-gnu/ ; \
+		ln -sf ../$(DEB_HOST_MULTIARCH)/$$i $(HEADERS_PACKAGE)/usr/include/i386-kfreebsd-gnu/ ; \
 	done
 endif
 
